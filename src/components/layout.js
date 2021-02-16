@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
             <Social />
             <Email />
 
-            <div id="content">{children}</div>
+            <div>{children}</div>
           </StyledContent>
         </ThemeProvider>
       </div>
