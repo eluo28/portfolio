@@ -29,18 +29,30 @@ const RightCol = styled.div`
   justify-content: center;
 `
 
-const Skills = styled.div`
-  background-color: red;
-`
+// const Skills = styled.div`
+//   margin-bottom: 100px;
+//   display: flex;
+//   justify-content: center;
+//   span {
+//     display: inline-block;
+//     color: white;
+//     mix-blend-mode: difference;
+//     margin: 0 20px;
+//   }
+// `
 
 const About = () => {
   // const skills = [
-  //   "JavaScript (ES6+)",
-  //   "HTML & (S)CSS",
+  //   "Java",
+  //   "Python",
   //   "React",
-  //   "Vue",
-  //   "Node.js",
-  //   "WordPress",
+  //   "Javascript",
+  //   "C",
+  //   "C++",
+  //   "Go",
+  //   "HTML",
+  //   "CSS",
+  //   "SQL",
   // ]
 
   return (
@@ -75,7 +87,14 @@ const About = () => {
           <RightCol>Image</RightCol>
         </Column>
       </StyledAboutSection>
-      <Skills>bruh</Skills>
+      {/* <Skills>
+        {skills.map((skill, i) => (
+          <>
+            <span>{skill}</span>
+            {i != skills.length - 1 ? <span>-</span> : null}
+          </>
+        ))}
+      </Skills> */}
     </>
   )
 }
