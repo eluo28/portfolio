@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import TransitionStyles from "./TransitionStyles.js"
 
 const GlobalStyle = createGlobalStyle`
 
@@ -15,7 +16,9 @@ const GlobalStyle = createGlobalStyle`
     --fz-xxl: 22px;
     --fz-heading: 32px;
 
+    --tab-height: 42px;
 
+    --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 
   html {
@@ -93,7 +96,7 @@ const GlobalStyle = createGlobalStyle`
 
 
 
-
+  ${TransitionStyles};
 
 `
 

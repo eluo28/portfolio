@@ -57,7 +57,7 @@ const About = () => {
 
   return (
     <>
-      <StyledAboutSection>
+      <StyledAboutSection id="about">
         <Column>
           <LeftCol>
             <h2>About Me</h2>
