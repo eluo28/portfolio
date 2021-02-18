@@ -20,7 +20,9 @@ const Column = styled.div`
 
 const LeftCol = styled.div`
   text-align: right;
-  margin-right: 40px;
+  margin-right: 64px;
+  width: 380px;
+  // background-color: blue;
 `
 
 const RightCol = styled.div`

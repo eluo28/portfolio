@@ -4,7 +4,7 @@ import TransitionStyles from "./TransitionStyles.js"
 const GlobalStyle = createGlobalStyle`
 
   :root{
-    --font-roboto: 'Roboto', sans-serif;
+    --font-lato: 'Lato', sans-serif;
     --font-playfair: 'Playfair Display', serif;
 
     --fz-xxs: 12px;
@@ -32,12 +32,16 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     min-height: 100%;
     background: linear-gradient(90deg, #e7e7e7 50%, #121212 50%);
-    font-family: var(--font-roboto);
+    font-family: var(--font-lato);
     overflow-x: hidden;
     line-height: 1.3;
 
     @media (max-width: 480px) {
       font-size: var(--fz-lg);
+    }
+
+    @media (max-width: 480px) {
+      background: white;
     }
 
 
@@ -86,10 +90,7 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     text-decoration-skip-ink: auto;
     color: inherit;
-  
-    &:hover {
-      color: white;
-    }
+    
   }
 
 

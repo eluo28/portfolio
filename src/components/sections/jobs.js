@@ -6,6 +6,7 @@ import styled from "styled-components"
 const StyledJobsSection = styled.section`
   max-width: 1000px;
   // background-color: white;
+
   .inner {
     display: flex;
 
@@ -17,10 +18,17 @@ const StyledJobsSection = styled.section`
 
 const Column = styled.div`
   flex: 50%;
+
+  .header {
+    font-family: var(--font-playfair);
+    font-size: 32px;
+    float: right;
+    margin-right: 64px;
+  }
 `
 
 const StyledTabList = styled.ul`
-  margin: 0 80px 0 0;
+  margin: 0 64px 0 0;
   position: relative;
   padding: 0 40px 0 0;
   width: max-content;
@@ -48,9 +56,17 @@ const StyledTabButton = styled.div`
     margin-right: 20px;
   }
 
-  &:hover,
-  &:focus {
-    background-color: white;
+  h2 {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: ${({ isActive }) => (isActive ? "1" : ".75")};
+  }
+
+  h5 {
+    margin-right: 32px;
+    font-weight: 300;
+    opacity: ${({ isActive }) => (isActive ? ".9" : ".75")};
+    font-size: 13px;
   }
 `
 const StyledHighlight = styled.div`
@@ -75,30 +91,34 @@ const StyledTabContent = styled.div`
   width: 100%;
 
   padding-top: 10px;
-  padding-left: 30px;
+  padding-left: 64px;
   color: white;
 
   h1 {
-    font-weight: 400;
-    font-size: var(--fz-lg);
+    font-weight: 300;
+    font-size: 24px;
   }
 
-  span {
+  h2 {
     font-weight: 600;
-    font-size: var(--fz-xxl);
+    font-size: 32px;
+    margin-bottom: 8px;
   }
 
   h4 {
     font-weight: 300;
-
+    margin-top: 26px;
     font-size: var(--fz-xs);
     display: flex;
     align-items: center;
+
+    white-space: nowrap;
     &:after {
-      margin-left: 16px;
       content: "";
-      width: 300px;
+
       height: 1px;
+      margin-left: 32px;
+      width: 100%;
 
       background-color: white;
     }
@@ -106,13 +126,16 @@ const StyledTabContent = styled.div`
 
   ul {
     list-style: none;
-    font-size: var(--fz-md);
+    font-size: 14px;
+    margin-top: 30px;
+    padding: 0 0 0 24px;
     li {
       position: relative;
-      padding-left: 30px;
-      margin-bottom: 10px;
+      line-height: 160%;
+      padding-left: 24px;
+      margin-bottom: 30px;
       &:before {
-        content: "▹";
+        content: ">";
         position: absolute;
         left: 0;
         color: white;
@@ -152,7 +175,7 @@ const Jobs = () => {
     <StyledJobsSection id="jobs">
       <div className="inner">
         <Column>
-          <h2>Where I’ve Worked</h2>
+          <h2 className="header">Where I’ve Worked</h2>
           <StyledTabList>
             {jobsData.map(({ node }, i) => {
               const { company, season } = node.frontmatter
@@ -162,8 +185,8 @@ const Jobs = () => {
                     isActive={activeTabId === i}
                     onClick={() => setActiveTabId(i)}
                   >
-                    <span>{season}</span>
-                    {company}
+                    <h5>{season}</h5>
+                    <h2>{company}</h2>
                   </StyledTabButton>
                 </li>
               )
@@ -185,9 +208,12 @@ const Jobs = () => {
               >
                 <StyledTabContent id={`panel-${i}`} hidden={activeTabId !== i}>
                   <h1>
-                    <span> {title}</span> &nbsp;@&nbsp; {company}
+                    <h2> {title}</h2>
+                    <div>&#64; {company}</div>
                   </h1>
+
                   <h4>{range}</h4>
+
                   <div dangerouslySetInnerHTML={{ __html: html }} />
                 </StyledTabContent>
               </CSSTransition>

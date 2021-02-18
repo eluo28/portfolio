@@ -6,8 +6,12 @@ const Head = () => {
     <Helmet>
       <meta charSet="utf-8" />
       <title>Edwin Luo</title>
-      <link rel="preconnect" href="https://fonts.gstatic.com"/>
-      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@100;300;400;700&display=swap"
+        rel="stylesheet"
+      />
+ 
       {/* <link rel="canonical" href="http://mysite.com/example" /> */}
     </Helmet>
   )

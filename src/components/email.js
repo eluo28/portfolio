@@ -17,6 +17,7 @@ const StyledLinkWrapper = styled.div`
     height: 90px;
     margin: 0 auto;
     background-color: white;
+    opacity: 0.75;
   }
 
   a {
@@ -25,11 +26,6 @@ const StyledLinkWrapper = styled.div`
     font-size: var(--fz-xxs);
     letter-spacing: 0.1em;
     writing-mode: vertical-rl;
-
-    &:hover,
-    &:focus {
-      transform: translateY(-3px);
-    }
   }
 `
 

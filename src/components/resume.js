@@ -28,11 +28,6 @@ const StyledResume = styled.div`
     font-size: var(--fz-xxs);
     letter-spacing: 0.1em;
     writing-mode: vertical-rl;
-
-    &:hover,
-    &:focus {
-      transform: translateY(-3px);
-    }
   }
 `
 

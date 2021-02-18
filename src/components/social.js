@@ -19,7 +19,7 @@ const StyledSocialList = styled.ul`
     height: 90px;
     margin: 0 auto;
     background-color: black;
-    opacity: 0.75;
+    opacity: 0.25;
   }
 
   li {
@@ -29,11 +29,6 @@ const StyledSocialList = styled.ul`
 
     a {
       padding: 10px;
-
-      &:hover,
-      &:focus {
-        transform: translateY(-3px);
-      }
 
       svg {
         width: 20px;

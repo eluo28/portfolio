@@ -10,13 +10,14 @@ const StyledHeader = styled.div`
   top: 0;
   z-index: 11;
   width: 100%;
-  height: 70px;
+  height: 80px;
+  // background-color: red;
 `
 
 const StyledLinks = styled.div`
   display: flex;
   align-items: center;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
 
   @media (max-width: 768px) {
     display: none;
@@ -27,7 +28,7 @@ const StyledLinks = styled.div`
     width: 120px;
     height: 1px;
     background-color: black;
-    opacity: 0.75;
+    opacity: 0.25;
   }
 
   ol {
@@ -35,7 +36,7 @@ const StyledLinks = styled.div`
     list-style: none;
     li {
       margin: 0 24px;
-      font-size: var(--fz-xs);
+      font-size: 13px;
     }
   }
 `
