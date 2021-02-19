@@ -25,6 +25,17 @@ const Column = styled.div`
     float: right;
     margin-right: 64px;
   }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 64px;
+    align-items: flex-end;
+    width: 100%;
+    // background-color: red;
+    // justify-content: center;
+  }
 `
 
 const StyledTabList = styled.ul`
@@ -45,8 +56,8 @@ const StyledTabButton = styled.div`
   cursor: pointer;
   width: 100%;
   height: var(--tab-height);
+  border-right: 2px solid rgba(0, 0, 0, 0.05);
 
-  opacity: ${({ isActive }) => (isActive ? "1" : ".5")};
   justify-content: flex-end;
   font-size: var(--fz-xs);
 
@@ -54,6 +65,15 @@ const StyledTabButton = styled.div`
 
   span {
     margin-right: 20px;
+  }
+  &:hover,
+  &:focus {
+    h2 {
+      opacity: 1;
+    }
+    h5 {
+      opacity: 0.9;
+    }
   }
 
   h2 {
@@ -76,15 +96,16 @@ const StyledHighlight = styled.div`
 
   z-index: 10;
   width: 2px;
+  margin-right: -2px;
   height: var(--tab-height);
   border-radius: 4px;
   background: black;
-  opacity: 0.5;
+
   transform: translateY(
     calc(${({ activeTabId }) => activeTabId} * var(--tab-height))
   );
-  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition-delay: 0.1s;
+  transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 0.5);
+  transition-delay: 0.05s;
 `
 
 const StyledTabContent = styled.div`
@@ -175,24 +196,26 @@ const Jobs = () => {
     <StyledJobsSection id="jobs">
       <div className="inner">
         <Column>
-          <h2 className="header">Where I’ve Worked</h2>
-          <StyledTabList>
-            {jobsData.map(({ node }, i) => {
-              const { company, season } = node.frontmatter
-              return (
-                <li key={i}>
-                  <StyledTabButton
-                    isActive={activeTabId === i}
-                    onClick={() => setActiveTabId(i)}
-                  >
-                    <h5>{season}</h5>
-                    <h2>{company}</h2>
-                  </StyledTabButton>
-                </li>
-              )
-            })}
-            <StyledHighlight activeTabId={activeTabId} />
-          </StyledTabList>
+          <div className="left">
+            <h2 className="header">Where I’ve Worked</h2>
+            <StyledTabList>
+              {jobsData.map(({ node }, i) => {
+                const { company, season } = node.frontmatter
+                return (
+                  <li key={i}>
+                    <StyledTabButton
+                      isActive={activeTabId === i}
+                      onClick={() => setActiveTabId(i)}
+                    >
+                      <h5>{season}</h5>
+                      <h2>{company}</h2>
+                    </StyledTabButton>
+                  </li>
+                )
+              })}
+              <StyledHighlight activeTabId={activeTabId} />
+            </StyledTabList>
+          </div>
         </Column>
         <Column>
           {jobsData.map(({ node }, i) => {

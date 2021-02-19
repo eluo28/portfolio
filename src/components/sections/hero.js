@@ -25,61 +25,63 @@ const StyledHeroSection = styled.div`
 
   h3 {
     margin: 0 700px 0 0;
-    font-weight: 300;
     font-size: 26px;
-    opacity: 0.7;
+    opacity: 0.5;
     letter-spacing: 0.05em;
   }
 
   h4 {
-    margin: 0 0 0 300px;
+    margin: 24px 0 0 300px;
     font-size: 24px;
+    font-weight: 300;
+    opacity: 0.5;
   }
 
   h5 {
-    margin: 0 200px 0 0;
+    margin: 24px 200px 0 0;
+
     font-size: 22px;
+    opacity: 0.4;
   }
 
   h6 {
-    margin: 0 0 0 200px;
+    margin: 34px 0 0 200px;
     font-size: 20px;
+
+    opacity: 0.4;
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      left: 0px;
+    }
+
+    100% {
+      opacity: 0;
+      left: 150px;
+    }
   }
 
   @-webkit-keyframes fadeOut {
-    from {
+    0% {
       opacity: 1;
+      left: 0px;
     }
 
-    to {
+    100% {
       opacity: 0;
-    }
-  }
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-
-    to {
-      opacity: 0;
+      left: 150px;
     }
   }
 
   .animate__fadeOut {
     -webkit-animation-name: fadeOut;
     animation-name: fadeOut;
+
+    // mix-blend-mode: difference;
   }
 
-  /* Fading entrances  */
-  @-webkit-keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -106,15 +108,15 @@ const Hero = () => {
   const items = [one, two, three, four, five, six]
 
   return (
-    <StyledHeroSection>
+    <StyledHeroSection id="hero">
       {items.map((item, i) => (
-        <ScrollAnimation
-          animateIn="animate__fadeIn"
-          animateOut="animate__fadeOut"
-          offset={200}
-        >
-          <div key={i}>{item}</div>
-        </ScrollAnimation>
+        // <ScrollAnimation
+        //   animateIn="animate__fadeIn"
+        //   animateOut="animate__fadeOut"
+        //   offset={200}
+        // >
+        <div key={i}>{item}</div>
+        // {/* </ScrollAnimation> */}
       ))}
     </StyledHeroSection>
   )

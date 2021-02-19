@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
   :root{
     --font-lato: 'Lato', sans-serif;
     --font-playfair: 'Playfair Display', serif;
+    --font-roboto:'Roboto', sans-serif;
 
     --fz-xxs: 12px;
     --fz-xs: 13px;
@@ -70,7 +71,7 @@ const GlobalStyle = createGlobalStyle`
 
   section {
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 150px 0;
     max-width: 1000px;
     
 

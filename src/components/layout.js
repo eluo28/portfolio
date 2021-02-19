@@ -1,7 +1,12 @@
 import React, { useEffect } from "react"
 import { GlobalStyle, theme } from "../styles"
-import { Head, Nav, Social, Email, Resume } from "../components"
+import { Head, Nav, Social, Email, Resume, Footer } from "../components"
 import styled, { ThemeProvider } from "styled-components"
+
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]')
+}
 
 const StyledContent = styled.div`
   display: flex;
@@ -40,7 +45,7 @@ const Layout = ({ children }) => {
             <Social />
             <Email />
 
-            <div>{children}</div>
+            <div>{children} <Footer /></div>
           </StyledContent>
         </ThemeProvider>
       </div>

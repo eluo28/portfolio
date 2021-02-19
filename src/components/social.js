@@ -34,6 +34,11 @@ const StyledSocialList = styled.ul`
         width: 20px;
         height: 20px;
       }
+      opacity: 0.65;
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
     }
   }
 `

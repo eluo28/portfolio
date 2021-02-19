@@ -10,6 +10,8 @@ const StyledResume = styled.div`
   position: relative;
   color: white;
 
+  font-family: var(--font-roboto);
+
   @media (max-width: 768px) {
     display: none;
   }
@@ -23,6 +25,7 @@ const StyledResume = styled.div`
   }
 
   a {
+    opacity: 0.75;
     margin: 20px auto;
     padding: 10px;
     font-size: var(--fz-xxs);

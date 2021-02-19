@@ -8,4 +8,6 @@ export { default as Resume } from "./resume"
 export { default as Hero } from "./sections/hero"
 export { default as About } from "./sections/about"
 export { default as Jobs } from "./sections/jobs"
+export { default as Contact } from "./sections/contact"
+export { default as Footer } from "./footer"
 

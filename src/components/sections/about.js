@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
 
 const StyledAboutSection = styled.section`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -26,9 +28,32 @@ const LeftCol = styled.div`
 `
 
 const RightCol = styled.div`
-  display: flex;
-  color: white;
-  justify-content: center;
+  margin-left: 64px;
+  position: relative;
+
+  .white_outline {
+    border-width: 4px;
+    border-color: white;
+    border-style: solid;
+    width: 200px;
+    height: 320px;
+    margin-left: 100px;
+  }
+
+  .white_rec {
+    position: absolute;
+    left: 64px;
+    top: -100px;
+    width: 200px;
+    height: 320px;
+    background: white;
+  }
+
+  .img {
+    position: absolute;
+    left: 0;
+    top: -32px;
+  }
 `
 
 // const Skills = styled.div`
@@ -56,6 +81,21 @@ const About = () => {
   //   "CSS",
   //   "SQL",
   // ]
+
+  const data = useStaticQuery(graphql`
+    query {
+      avatar: file(
+        sourceInstanceName: { eq: "images" }
+        relativePath: { eq: "me.JPG" }
+      ) {
+        childImageSharp {
+          fixed(width: 200, height: 320) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
 
   return (
     <>
@@ -86,7 +126,13 @@ const About = () => {
           </LeftCol>
         </Column>
         <Column>
-          <RightCol>Image</RightCol>
+          <RightCol>
+            <div className="white_outline"></div>
+            <div className="white_rec"></div>
+            <div className="img">
+              <Img fixed={data.avatar.childImageSharp.fixed} alt="Avatar" />
+            </div>
+          </RightCol>
         </Column>
       </StyledAboutSection>
       {/* <Skills>

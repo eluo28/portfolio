@@ -21,6 +21,8 @@ const StyledLinkWrapper = styled.div`
   }
 
   a {
+    font-family: var(--font-roboto);
+    opacity: 0.75;
     margin: 20px auto;
     padding: 10px;
     font-size: var(--fz-xxs);
