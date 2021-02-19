@@ -50,13 +50,11 @@ const GlobalStyle = createGlobalStyle`
 
  
   main {
-    
     margin: 0 auto;
-    
     max-width: 1600px;
     min-height: 100vh;
-
     padding: 0px 150px;
+    // background-color:red;
   
     @media (max-width: 1080px) {
       padding: 0px 100px;
@@ -84,16 +82,11 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-
-
   a {
-    display: inline-block;
     text-decoration: none;
     text-decoration-skip-ink: auto;
     color: inherit;
-    
   }
-
 
 
 

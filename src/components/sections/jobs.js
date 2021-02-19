@@ -132,17 +132,24 @@ const StyledTabContent = styled.div`
     font-size: var(--fz-xs);
     display: flex;
     align-items: center;
-
     white-space: nowrap;
+    position: relative;
+
     &:after {
       content: "";
-
+      position: absolute;
+      opacity: 0.75;
       height: 1px;
+      left: 100%;
       margin-left: 32px;
-      width: 100%;
+      width: 100vw;
 
       background-color: white;
     }
+  }
+
+  .container {
+    display: flex;
   }
 
   ul {
@@ -208,6 +215,7 @@ const Jobs = () => {
                       onClick={() => setActiveTabId(i)}
                     >
                       <h5>{season}</h5>
+
                       <h2>{company}</h2>
                     </StyledTabButton>
                   </li>
@@ -235,7 +243,9 @@ const Jobs = () => {
                     <div>&#64; {company}</div>
                   </h1>
 
-                  <h4>{range}</h4>
+                  <div className="container">
+                    <h4>{range}</h4>
+                  </div>
 
                   <div dangerouslySetInnerHTML={{ __html: html }} />
                 </StyledTabContent>

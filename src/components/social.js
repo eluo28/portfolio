@@ -23,6 +23,7 @@ const StyledSocialList = styled.ul`
   }
 
   li {
+    margin-bottom: 10px;
     &:last-of-type {
       margin-bottom: 20px;
     }

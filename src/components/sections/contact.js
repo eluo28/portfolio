@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from "react"
+import React from "react"
 import styled from "styled-components"
+import { email } from "../../config"
 
 const StyledContactSection = styled.section`
   max-width: 1000px;
@@ -23,6 +24,7 @@ const Column = styled.div`
       content: "";
       width: 100%;
       height: 1px;
+      opacity: 0.75;
       margin-top: 64px;
       background-color: white;
     }
@@ -34,11 +36,11 @@ const Column = styled.div`
     p {
       font-size: 22px;
       line-height: 1.2;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       text-align: right;
     }
 
-    .button {
+    a {
       margin-top: 24px;
       color: white;
       width: 100%;
@@ -64,7 +66,7 @@ const Contact = () => {
             inbox is always open. Whether you have a question or just want to
             say hi, I'll try my best to get back to you!
           </p>
-          <div className="button">Come say hi!</div>
+          <a href={`mailto:${email}`}>Come say hi!</a>
         </div>
       </Column>
       <Column>

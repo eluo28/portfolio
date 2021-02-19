@@ -5,10 +5,8 @@ import styled from "styled-components"
 const StyledHeroSection = styled.div`
   ${({ theme }) => theme.mixins.flexCenter};
 
-  flex-direction: column;
   min-height: 100vh;
-  color: white;
-  mix-blend-mode: difference;
+  text-align: center;
 
   h1 {
     font-size: 22px;
@@ -20,7 +18,14 @@ const StyledHeroSection = styled.div`
   h2 {
     margin: 0 100px 0 0;
     font-size: 112px;
+    display: flex;
+    justify-content: center;
     font-family: var(--font-playfair);
+  }
+
+  .special {
+    color: white;
+    margin-left: 24px;
   }
 
   h3 {
@@ -35,55 +40,86 @@ const StyledHeroSection = styled.div`
     font-size: 24px;
     font-weight: 300;
     opacity: 0.5;
+    color: white;
   }
 
   h5 {
-    margin: 24px 200px 0 0;
-
+    margin: 24px 300px 0 0;
     font-size: 22px;
     opacity: 0.4;
   }
 
   h6 {
-    margin: 34px 0 0 200px;
+    margin: 34px 0 0 400px;
     font-size: 20px;
-
+    color: white;
     opacity: 0.4;
   }
 
-  @keyframes fadeOut {
+  // keyframes
+
+  @keyframes fadeOutLeft {
     0% {
       opacity: 1;
-      left: 0px;
     }
 
     100% {
       opacity: 0;
-      left: 150px;
+      -webkit-transform: translate3d(-100px, 0, 0);
+      transform: translate3d(-100px, 0, 0);
     }
   }
 
-  @-webkit-keyframes fadeOut {
+  @-webkit-keyframes fadeOutLeft {
     0% {
       opacity: 1;
-      left: 0px;
     }
 
     100% {
       opacity: 0;
-      left: 150px;
+      -webkit-transform: translate3d(-100px, 0, 0);
+      transform: translate3d(-100px, 0, 0);
     }
   }
 
-  .animate__fadeOut {
-    -webkit-animation-name: fadeOut;
-    animation-name: fadeOut;
-
-    // mix-blend-mode: difference;
+  .animate__fadeOutLeft {
+    -webkit-animation-name: fadeOutLeft;
+    animation-name: fadeOutLeft;
   }
 
-  @keyframes fadeIn {
+  @keyframes fadeOutRight {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(100px, 0, 0);
+      transform: translate3d(100px, 0, 0);
+    }
+  }
+
+  @-webkit-keyframes fadeOutRight {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      -webkit-transform: translate3d(100px, 0, 0);
+      transform: translate3d(100px, 0, 0);
+    }
+  }
+
+  .animate__fadeOutRight {
+    -webkit-animation-name: fadeOutRight;
+    animation-name: fadeOutRight;
+  }
+
+  @keyframes fadeInLeft {
     from {
+      -webkit-transform: translate3d(-100px, 0, 0);
+      transform: translate3d(-100px, 0, 0);
       opacity: 0;
     }
 
@@ -91,33 +127,104 @@ const StyledHeroSection = styled.div`
       opacity: 1;
     }
   }
-  .animate__fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
+
+  @-webkit-keyframes @keyframes fadeInLeft {
+    from {
+      -webkit-transform: translate3d(-100px, 0, 0);
+      transform: translate3d(-100px, 0, 0);
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+  .animate__fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+  }
+
+  @keyframes fadeInRight {
+    from {
+      -webkit-transform: translate3d(100px, 0, 0);
+      transform: translate3d(100px, 0, 0);
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes @keyframes fadeInRight {
+    from {
+      -webkit-transform: translate3d(100px, 0, 0);
+      transform: translate3d(100px, 0, 0);
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+  .animate__fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
   }
 `
 
+const animate = (direction, children) => {
+  let res
+
+  if (direction == "left") {
+    res = (
+      <ScrollAnimation
+        animateIn="animate__fadeInLeft"
+        animateOut="animate__fadeOutLeft"
+        offset={200}
+      >
+        {children}
+      </ScrollAnimation>
+    )
+  } else {
+    res = (
+      <ScrollAnimation
+        animateIn="animate__fadeInRight"
+        animateOut="animate__fadeOutRight"
+        offset={200}
+      >
+        {children}
+      </ScrollAnimation>
+    )
+  }
+
+  return res
+}
+
 const Hero = () => {
-  const one = <h1>Hello, my name is</h1>
-  const two = <h2>Edwin Luo.</h2>
-  const three = <h3>I am a software engineer.</h3>
-  const four = <h4>I am a software engineer.</h4>
-  const five = <h5>I am a software engineer.</h5>
-  const six = <h6>I am a software engineer.</h6>
-
-  const items = [one, two, three, four, five, six]
-
   return (
     <StyledHeroSection id="hero">
-      {items.map((item, i) => (
-        // <ScrollAnimation
-        //   animateIn="animate__fadeIn"
-        //   animateOut="animate__fadeOut"
-        //   offset={200}
-        // >
-        <div key={i}>{item}</div>
-        // {/* </ScrollAnimation> */}
-      ))}
+      <div>
+        {animate("left", <h1>Hello, my name is</h1>)}
+        <h2>
+          {animate("left", <span>Edwin</span>)}
+          {animate("right", <span className="special">Luo.</span>)}
+        </h2>
+
+        {animate("left", <h3>I am a software engineer.</h3>)}
+        {animate("right", <h4>I am a software engineer.</h4>)}
+        {animate("left", <h5>I am a software engineer.</h5>)}
+        {animate("right", <h6>I am a software engineer.</h6>)}
+
+        {/* {items.map((item, i) => (
+          <ScrollAnimation
+            animateIn="animate__fadeIn"
+            animateOut="animate__fadeOut"
+          >
+            <div key={i}>{item}</div>
+          </ScrollAnimation>
+        ))} */}
+      </div>
     </StyledHeroSection>
   )
 }
