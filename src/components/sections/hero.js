@@ -11,8 +11,9 @@ const StyledHeroSection = styled.div`
   h1 {
     font-size: 22px;
     margin-right: 600px;
-    font-weight: 100;
+    font-weight: 300;
     letter-spacing: 0.05em;
+    opacity: 0.8;
   }
 
   h2 {
@@ -29,7 +30,7 @@ const StyledHeroSection = styled.div`
   }
 
   h3 {
-    margin: 0 700px 0 0;
+    margin: 32px 600px 0 0;
     font-size: 26px;
     opacity: 0.5;
     letter-spacing: 0.05em;

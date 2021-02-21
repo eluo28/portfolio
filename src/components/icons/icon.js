@@ -1,6 +1,6 @@
 import React from "react"
 
-import { IconGitHub, IconLinkedin } from "../icons"
+import { IconGitHub, IconLinkedin, IconExternal } from "../icons"
 
 const Icon = ({ name }) => {
   switch (name) {
@@ -9,6 +9,9 @@ const Icon = ({ name }) => {
 
     case "Linkedin":
       return <IconLinkedin />
+
+    case "External":
+      return <IconExternal />
 
     default:
       return null

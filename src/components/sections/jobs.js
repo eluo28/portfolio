@@ -118,17 +118,18 @@ const StyledTabContent = styled.div`
   h1 {
     font-weight: 300;
     font-size: 24px;
+    margin-bottom: 8px;
   }
 
   h2 {
     font-weight: 600;
     font-size: 32px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
 
   h4 {
     font-weight: 300;
-    margin-top: 26px;
+
     font-size: var(--fz-xs);
     display: flex;
     align-items: center;
@@ -149,13 +150,14 @@ const StyledTabContent = styled.div`
   }
 
   .container {
+    // background-color: red;
     display: flex;
   }
 
   ul {
     list-style: none;
     font-size: 14px;
-    margin-top: 30px;
+    margin-top: 14px;
     padding: 0 0 0 24px;
     li {
       position: relative;

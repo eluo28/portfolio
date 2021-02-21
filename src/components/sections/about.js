@@ -43,7 +43,7 @@ const RightCol = styled.div`
   .white_rec {
     position: absolute;
     left: 64px;
-    top: -100px;
+    top: -80px;
     width: 200px;
     height: 320px;
     background: white;
@@ -86,7 +86,7 @@ const About = () => {
     query {
       avatar: file(
         sourceInstanceName: { eq: "images" }
-        relativePath: { eq: "me.JPG" }
+        relativePath: { eq: "me.jpg" }
       ) {
         childImageSharp {
           fixed(width: 200, height: 320) {

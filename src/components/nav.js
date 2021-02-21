@@ -42,8 +42,6 @@ const StyledLinks = styled.div`
     &:focus {
       opacity: 1;
     }
-
-    
   }
 
   .nav__item--active {
