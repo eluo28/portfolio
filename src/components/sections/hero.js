@@ -57,127 +57,13 @@ const StyledHeroSection = styled.div`
     opacity: 0.4;
   }
 
-  // keyframes
-
-  @keyframes fadeOutLeft {
-    0% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-      -webkit-transform: translate3d(-100px, 0, 0);
-      transform: translate3d(-100px, 0, 0);
-    }
-  }
-
-  @-webkit-keyframes fadeOutLeft {
-    0% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-      -webkit-transform: translate3d(-100px, 0, 0);
-      transform: translate3d(-100px, 0, 0);
-    }
-  }
-
-  .animate__fadeOutLeft {
-    -webkit-animation-name: fadeOutLeft;
-    animation-name: fadeOutLeft;
-  }
-
-  @keyframes fadeOutRight {
-    0% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-      -webkit-transform: translate3d(100px, 0, 0);
-      transform: translate3d(100px, 0, 0);
-    }
-  }
-
-  @-webkit-keyframes fadeOutRight {
-    0% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-      -webkit-transform: translate3d(100px, 0, 0);
-      transform: translate3d(100px, 0, 0);
-    }
-  }
-
-  .animate__fadeOutRight {
-    -webkit-animation-name: fadeOutRight;
-    animation-name: fadeOutRight;
-  }
-
-  @keyframes fadeInLeft {
-    from {
-      -webkit-transform: translate3d(-100px, 0, 0);
-      transform: translate3d(-100px, 0, 0);
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
-
-  @-webkit-keyframes @keyframes fadeInLeft {
-    from {
-      -webkit-transform: translate3d(-100px, 0, 0);
-      transform: translate3d(-100px, 0, 0);
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
-  .animate__fadeInLeft {
-    -webkit-animation-name: fadeInLeft;
-    animation-name: fadeInLeft;
-  }
-
-  @keyframes fadeInRight {
-    from {
-      -webkit-transform: translate3d(100px, 0, 0);
-      transform: translate3d(100px, 0, 0);
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
-
-  @-webkit-keyframes @keyframes fadeInRight {
-    from {
-      -webkit-transform: translate3d(100px, 0, 0);
-      transform: translate3d(100px, 0, 0);
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
-  .animate__fadeInRight {
-    -webkit-animation-name: fadeInRight;
-    animation-name: fadeInRight;
-  }
+  
 `
 
 const animate = (direction, children) => {
   let res
 
-  if (direction == "left") {
+  if (direction === "left") {
     res = (
       <ScrollAnimation
         animateIn="animate__fadeInLeft"

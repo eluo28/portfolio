@@ -1,13 +1,14 @@
 ---
-date: '2021-04-01'
-title: 'Anonymous Diary'
-github: 'https://github.com/eluo28/Anonymous-Diary'
-external: 'https://medium.com/stories-from-upstatement/integrating-algolia-search-with-wordpress-multisite-e2dea3ed449c'
+date: "2021-04-01"
+title: "Anonymous Diary"
+github: "https://github.com/eluo28/Anonymous-Diary"
+external: "https://medium.com/stories-from-upstatement/integrating-algolia-search-with-wordpress-multisite-e2dea3ed449c"
 tech:
-  - Typescript
+  - TypeScript
   - GraphQL
-  - Express
   - PostgreSQL
+
+category: "Web Development"
 ---
 
-Building a custom multisite compatible WordPress plugin to build global search with Algolia
+A web application that allows users to write down their lives and read from others, all behind a mask of anonymity.

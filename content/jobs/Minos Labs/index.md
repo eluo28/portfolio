@@ -4,7 +4,7 @@ title: "Full Stack Development Intern"
 company: "Minos Labs"
 location: "Jersey City, NJ"
 range: "January 2021 - April 2021"
-url: "https://www.apple.com/music/"
+url: "https://www.minoslabs.com/"
 season: "Spring 2021"
 ---
 

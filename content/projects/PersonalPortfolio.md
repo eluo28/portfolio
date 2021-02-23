@@ -1,12 +1,12 @@
 ---
-date: '2020-03-27'
-title: 'Personal Portfolio'
-github: 'https://github.com/eluo28/portfolio'
-external: 'https://medium.com/stories-from-upstatement/integrating-algolia-search-with-wordpress-multisite-e2dea3ed449c'
+date: "2020-03-27"
+title: "Personal Portfolio"
+github: "https://github.com/eluo28/portfolio"
+external: "https://edwinluo.com"
 tech:
   - Gatsby
-  - Styled Components
   - GraphQL
+category: "Web Development"
 ---
 
-Building a custom multisite compatible WordPress plugin to build global search with Algolia
+A personal website to give a little insight into my life.

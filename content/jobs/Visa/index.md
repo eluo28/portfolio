@@ -4,7 +4,7 @@ title: "Software Engineer Intern"
 company: "Visa"
 location: "Highlands Ranch, CO"
 range: "May 2021 - August 2021"
-url: "https://www.apple.com/music/"
+url: "https://usa.visa.com/"
 season: "Summer 2021"
 ---
 

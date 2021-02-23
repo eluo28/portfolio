@@ -1,12 +1,12 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { CSSTransition } from "react-transition-group"
 import styled from "styled-components"
 import { Icon } from "../../components/icons"
 
 const StyledProjectsSection = styled.section`
-  max-width: 1000px;
   // background-color: white;
+  max-width: 1200px;
+  height: 500px;
 
   .inner {
     display: flex;
@@ -19,23 +19,104 @@ const StyledProjectsSection = styled.section`
 
 const Column = styled.div`
   flex: 50%;
+
+  .projects-grid {
+    // background-color: red;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+    grid-gap: 24px;
+    margin-left: 64px;
+  }
+`
+
+const LeftCol = styled.div`
+  text-align: right;
+  // background-color: red;
+  margin-right: 64px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 64px;
+  align-items: flex-end;
+
+  .container {
+    // background-color: red;
+    display: flex;
+
+    justify-content: flex-end;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 4px;
+  }
+
+  h4 {
+    font-weight: 300;
+    font-size: var(--fz-xs);
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      opacity: 0.75;
+      height: 1px;
+      right: 100%;
+      margin-right: 32px;
+
+      width: 100vw;
+
+      background-color: black;
+    }
+  }
+`
+
+const StyledTabList = styled.ul`
+  position: relative;
+  width: max-content;
+  float: right;
+  z-index: 3;
+
+  list-style: none;
+  font-family: var(--font-roboto);
+  font-size: 16px;
+  font-weight: 500;
+`
+
+const StyledTabButton = styled.div`
+  margin-bottom: 12px;
+  cursor: pointer;
+  opacity: ${({ isActive }) => (isActive ? "1" : ".5")};
+  height: var(--tab-height);
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 `
 
 const StyledProject = styled.div`
-  color: black;
-
-  margin-bottom: 10px;
+  color: white;
 
   .project-inner {
-    box-shadow: 0px 7px 6.58px 0.42px rgba(18, 18, 18, 0.27);
+    // background-color: red;
+    box-shadow: 0px 7px 6.58px 0.42px rgba(0, 0, 0, 0.6);
     border-radius: 10px;
-    width: 280px;
-    padding: 30px;
-    height: 280px;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
   }
 
   .top {
-    margin-bottom: 35px;
+    margin-bottom: 10px;
     ${({ theme }) => theme.mixins.flexBetween};
   }
 
@@ -43,38 +124,43 @@ const StyledProject = styled.div`
     display: flex;
     a {
       ${({ theme }) => theme.mixins.flexCenter};
-      padding: 5px 7px;
+      padding: 4px 6px;
 
       &.external {
         svg {
-          width: 22px;
-          height: 22px;
-          margin-top: -4px;
+          width: 20px;
+          height: 20px;
+          margin-top: -2px;
         }
       }
 
       svg {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
       }
     }
   }
 
   .title {
     font-weight: 700;
+    font-size: 20px;
   }
 
   .description {
     opacity: 0.9;
+    font-size: 12px;
   }
 
   .tech {
+    // background-color: red;
+    position: absolute;
+    bottom: 0;
     display: flex;
 
     flex-grow: 1;
     flex-wrap: wrap;
     padding: 0;
-    margin: 20px 0 0 0;
+
     list-style: none;
 
     li {
@@ -103,6 +189,7 @@ const Projects = () => {
               github
               external
               tech
+              category
             }
             html
           }
@@ -112,25 +199,72 @@ const Projects = () => {
   `)
 
   const projectsData = data.projects.edges
-  const [activeTabId, setActiveTabId] = useState(0)
+  const [activeTabCat, setActiveTabCat] = useState("All")
+
+  let showing = 0
+
+  const categories = ["All", "Web Development", "Machine Learning", "Scripts"]
+
+  const isHidden = (category, activeCat) => {
+    if (category === activeCat || activeCat === "All") {
+      showing += 1
+    }
+
+    if (showing > 4) {
+      return true
+    }
+
+    if (activeCat !== "All") {
+      return category !== activeCat
+    } else {
+      return false
+    }
+  }
 
   return (
     <StyledProjectsSection id="projects">
       <div className="inner">
         <Column>
-          <div>
+          <LeftCol>
+            <h1>Projects</h1>
+
+            <div className="container">
+              <h4>From a Variety of Categories</h4>
+            </div>
+            <StyledTabList>
+              {categories.map((category, i) => (
+                <li key={i}>
+                  <StyledTabButton
+                    isActive={activeTabCat === category}
+                    onClick={() => setActiveTabCat(category)}
+                  >
+                    {category}
+                  </StyledTabButton>
+                </li>
+              ))}
+            </StyledTabList>
+          </LeftCol>
+        </Column>
+
+        <Column>
+          <div className="projects-grid">
             {projectsData.map(({ node }, i) => {
               const { frontmatter, html } = node
-              const { title, github, external, tech } = frontmatter
+              const { title, github, external, tech, category } = frontmatter
 
               return (
-                <StyledProject>
+                <StyledProject hidden={isHidden(category, activeTabCat)}>
                   <div className="project-inner">
                     <div className="top">
                       <div>logo</div>
                       <div className="links">
                         {github && (
-                          <a href={github} aria-label="GitHub Link">
+                          <a
+                            href={github}
+                            aria-label="GitHub Link"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                          >
                             <Icon name="GitHub" />
                           </a>
                         )}
@@ -139,6 +273,8 @@ const Projects = () => {
                             href={external}
                             aria-label="External Link"
                             className="external"
+                            rel="noopener noreferrer"
+                            target="_blank"
                           >
                             <Icon name="External" />
                           </a>
@@ -167,8 +303,6 @@ const Projects = () => {
             })}
           </div>
         </Column>
-
-        <Column></Column>
       </div>
     </StyledProjectsSection>
   )

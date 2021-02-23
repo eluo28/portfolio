@@ -149,6 +149,12 @@ const StyledTabContent = styled.div`
     }
   }
 
+  a {
+    &:hover {
+      border-bottom: 2px solid white;
+    }
+  }
+
   .container {
     // background-color: red;
     display: flex;
@@ -242,7 +248,9 @@ const Jobs = () => {
                 <StyledTabContent id={`panel-${i}`} hidden={activeTabId !== i}>
                   <h1>
                     <h2> {title}</h2>
-                    <div>&#64; {company}</div>
+                    <a href={url} rel="noopener noreferrer" target="_blank">
+                      &#64; {company}
+                    </a>
                   </h1>
 
                   <div className="container">

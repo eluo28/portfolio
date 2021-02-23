@@ -1,13 +1,14 @@
 ---
-date: '2020-08-01'
-title: 'Detect My Setup'
-github: 'https://github.com/eluo28/DetectMySetup'
-external: 'https://medium.com/stories-from-upstatement/integrating-algolia-search-with-wordpress-multisite-e2dea3ed449c'
+date: "2020-08-01"
+title: "Detect My Setup"
+github: "https://github.com/eluo28/DetectMySetup"
+external: ""
 tech:
   - Python
   - Pandas
   - PyTorch
   - GCP
+category: "Machine Learning"
 ---
 
-Building a custom multisite compatible WordPress plugin to build global search with Algolia
+An object detection machine learning model that detects common objects in office setups.

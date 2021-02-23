@@ -1,12 +1,13 @@
 ---
-date: '2021-02-01'
-title: 'CreateRU'
-github: 'https://github.com/RutgersCreativeX/createRU'
-external: 'https://medium.com/stories-from-upstatement/integrating-algolia-search-with-wordpress-multisite-e2dea3ed449c'
+date: "2021-02-01"
+title: "CreateRU"
+github: "https://github.com/RutgersCreativeX/createRU"
+external: "https://createru.com/"
 tech:
   - Next.js
   - WordPress
   - PHP
+category: "Web Development"
 ---
 
-Building a custom multisite compatible WordPress plugin to build global search with Algolia
+The website for the Rutgers CreativeX Designathon - a hackathon for designers.

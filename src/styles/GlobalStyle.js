@@ -70,7 +70,7 @@ const GlobalStyle = createGlobalStyle`
   section {
     margin: 0 auto;
     padding: 150px 0;
-    max-width: 1000px;
+    
     
 
     @media (max-width: 768px) {

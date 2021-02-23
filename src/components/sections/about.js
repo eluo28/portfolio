@@ -106,22 +106,18 @@ const About = () => {
 
             <div>
               <p>
-                Hello! I'm Brittany, a software engineer based in Boston, MA.
+                Hello! I'm Edwin, a computer science student at the Rutgers
+                Honors College in New Brunswick, NJ.
               </p>
-
               <p>
-                I enjoy creating things that live on the internet, whether that
-                be websites, applications, or anything in between. My goal is to
-                always build products that provide pixel-perfect, performant
-                experiences.
+                I enjoy creating products and experiences that impact. Learning
+                new technologies and applying them to achieve this goal is
+                something I love to do.
               </p>
-
-              <p>
-                I enjoy creating things that live on the internet, whether that
-                be websites, applications, or anything in between. My goal is to
-                always build products that provide pixel-perfect, performant
-                experiences.
-              </p>
+              I'm always looking for opportunities to grow as a software
+              engineer and hope to one day affect billions of lives around the
+              world with my work.
+              <p></p>
             </div>
           </LeftCol>
         </Column>
