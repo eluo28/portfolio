@@ -22,14 +22,26 @@ const Column = styled.div`
 
 const LeftCol = styled.div`
   text-align: right;
+  // background-color: red;
   margin-right: 64px;
-  width: 380px;
+
+  @media (max-width: 1080px) {
+    margin-left: 64px;
+    margin-right: 32px;
+  }
+
+  font-size: 16px;
+  max-width: 380px;
   // background-color: blue;
 `
 
 const RightCol = styled.div`
   margin-left: 64px;
   position: relative;
+
+  @media (max-width: 1080px) {
+    margin: 0 32px;
+  }
 
   .white_outline {
     border-width: 4px;

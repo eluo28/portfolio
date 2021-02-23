@@ -24,6 +24,9 @@ const Column = styled.div`
     font-size: 32px;
     float: right;
     margin-right: 64px;
+    @media (max-width: 1080px) {
+      margin-right: 32px;
+    }
   }
 
   .left {
@@ -45,7 +48,9 @@ const StyledTabList = styled.ul`
   width: max-content;
   float: right;
   z-index: 3;
-
+  @media (max-width: 1080px) {
+    margin: 0 32px 0 0;
+  }
   list-style: none;
 `
 
@@ -109,11 +114,19 @@ const StyledHighlight = styled.div`
 `
 
 const StyledTabContent = styled.div`
-  width: 100%;
-
+  // background-color: red;
   padding-top: 10px;
-  padding-left: 64px;
+  margin-left: 64px;
   color: white;
+
+  @media (max-width: 1200px) {
+    width: 400px;
+  }
+
+  @media (max-width: 1080px) {
+    margin-left: 32px;
+    width: 300px;
+  }
 
   h1 {
     font-weight: 300;

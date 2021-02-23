@@ -1,6 +1,14 @@
 import React, { useEffect } from "react"
 import { GlobalStyle, theme } from "../styles"
-import { Head, Nav, Social, Email, Resume, Footer } from "../components"
+import {
+  Head,
+  Nav,
+  Social,
+  Email,
+  Resume,
+  Footer,
+  HeaderLogo,
+} from "../components"
 import styled, { ThemeProvider } from "styled-components"
 
 if (typeof window !== "undefined") {
@@ -44,8 +52,11 @@ const Layout = ({ children }) => {
             <Resume />
             <Social />
             <Email />
+            <HeaderLogo />
 
-            <div>{children} <Footer /></div>
+            <div>
+              {children} <Footer />
+            </div>
           </StyledContent>
         </ThemeProvider>
       </div>

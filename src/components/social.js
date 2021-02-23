@@ -12,6 +12,10 @@ const StyledSocialList = styled.ul`
   padding: 0;
   list-style: none;
 
+  @media (max-width: 900px) {
+    display: none;
+  }
+
   &:after {
     content: "";
     display: block;

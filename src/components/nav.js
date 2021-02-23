@@ -20,8 +20,22 @@ const StyledLinks = styled.div`
   align-items: center;
   letter-spacing: 0.05em;
 
-  @media (max-width: 768px) {
-    display: none;
+  @media (max-width: 1080px) {
+    // background-color: red;
+    position: absolute;
+    color: white;
+    margin-top: 32px;
+    display: block;
+    top: 0;
+    right: 0;
+    text-align: right;
+    li {
+      padding-right: 8px;
+    }
+
+    &:before {
+      display: none;
+    }
   }
 
   &:before {
@@ -38,6 +52,13 @@ const StyledLinks = styled.div`
     font-size: 13px;
     opacity: 0.65;
 
+    @media (max-width: 1080px) {
+      // background-color: red;
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+    }
+
     &:hover,
     &:focus {
       opacity: 1;
@@ -47,6 +68,11 @@ const StyledLinks = styled.div`
   .nav__item--active {
     border-bottom: 2px solid black !important;
     opacity: 1;
+
+    @media (max-width: 1080px) {
+      border-bottom: 2px solid transparent !important;
+      border-right: 2px solid white !important;
+    }
   }
 
   .item {
@@ -58,6 +84,10 @@ const StyledLinks = styled.div`
     display: flex;
     margin: 0;
     padding: 0;
+
+    @media (max-width: 1080px) {
+      flex-direction: column;
+    }
   }
 `
 

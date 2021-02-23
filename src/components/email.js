@@ -10,6 +10,10 @@ const StyledLinkWrapper = styled.div`
   position: relative;
   color: white;
 
+  @media (max-width: 900px) {
+    display: none;
+  }
+
   &:after {
     content: "";
     display: block;

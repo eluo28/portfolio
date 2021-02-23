@@ -18,6 +18,10 @@ const Column = styled.div`
     display: flex;
     flex-direction: column;
 
+    @media (max-width: 1080px) {
+      margin-left: 32px;
+    }
+
     &:after {
       position: absolute;
       // top: 32px;
@@ -32,6 +36,11 @@ const Column = styled.div`
 
   .left {
     margin-right: 64px;
+
+    @media (max-width: 1080px) {
+      margin-right: 32px;
+      margin-left: 64px;
+    }
 
     p {
       font-size: 22px;

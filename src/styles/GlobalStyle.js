@@ -37,12 +37,8 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     line-height: 1.3;
 
-    @media (max-width: 480px) {
-      font-size: var(--fz-lg);
-    }
-
-    @media (max-width: 480px) {
-      background: white;
+    @media (max-width: 768px) {
+      background: black;
     }
 
 
@@ -51,27 +47,20 @@ const GlobalStyle = createGlobalStyle`
  
   main {
     margin: 0 auto;
-    max-width: 1600px;
+   
     min-height: 100vh;
-    padding: 0px 150px;
+    
     // background-color:red;
-  
-    @media (max-width: 1080px) {
-      padding: 0px 100px;
-    }
-    @media (max-width: 768px) {
-      padding: 0px 50px;
-    }
-    @media (max-width: 480px) {
-      padding: 0px 25px;
-    }
+ 
   }
 
   section {
     margin: 0 auto;
     padding: 150px 0;
     
-    
+    @media (max-width: 1080px) {
+      padding: 120px 0;
+    }
 
     @media (max-width: 768px) {
       padding: 80px 0;

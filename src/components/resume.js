@@ -11,8 +11,7 @@ const StyledResume = styled.div`
   color: white;
 
   font-family: var(--font-roboto);
-
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     display: none;
   }
 
