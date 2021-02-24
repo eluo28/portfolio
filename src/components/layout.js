@@ -54,9 +54,8 @@ const Layout = ({ children }) => {
             <Email />
             <HeaderLogo />
 
-            <div>
-              {children} <Footer />
-            </div>
+            <div>{children}</div>
+            <Footer />
           </StyledContent>
         </ThemeProvider>
       </div>

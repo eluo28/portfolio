@@ -19,21 +19,18 @@ const Column = styled.div`
     font-size: 32px;
     font-family: var(--font-playfair);
 
-    width: 100% - 64px;
+    width: 100%;
 
     padding-bottom: 32px;
     border-bottom: 1px solid white;
 
     @media (max-width: 1080px) {
       margin-left: 32px;
-      width: 100% - 32px;
     }
 
     @media (max-width: 768px) {
       margin-left: 16px;
       font-size: 24px;
-
-      width: 100% - 16px;
     }
   }
 

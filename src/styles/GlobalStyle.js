@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    
     margin: 0;
     width: 100%;
     min-height: 100%;
@@ -47,11 +48,7 @@ const GlobalStyle = createGlobalStyle`
  
   main {
     margin: 0 auto;
-   
     min-height: 100vh;
-    
-    // background-color:red;
- 
   }
 
   section {

@@ -206,6 +206,18 @@ const StyledTabContent = styled.div`
       width: 300px;
       padding: 0;
     }
+
+    @media (max-width: 768px) {
+      margin-left: 32px;
+      max-width: 400px;
+      padding: 0;
+    }
+
+    @media (max-width: 400px) {
+      margin-left: 32px;
+      width: 200px;
+      padding: 0;
+    }
     li {
       position: relative;
       line-height: 160%;
@@ -308,10 +320,17 @@ const Jobs = () => {
             const { title, url, company, range } = frontmatter
 
             return (
-              <CSSTransition key={i} in={activeTabId === i} classNames="fade">
+              <CSSTransition
+                key={i}
+                in={activeTabId === i}
+                classNames="fade"
+                timeout={250}
+              >
                 <StyledTabContent id={`panel-${i}`} hidden={activeTabId !== i}>
                   <h1>
-                    <h2> {title}</h2>
+                    <div>
+                      <h2> {title}</h2>
+                    </div>
                     <a href={url} rel="noopener noreferrer" target="_blank">
                       &#64; {company}
                     </a>

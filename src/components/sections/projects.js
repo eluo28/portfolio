@@ -60,7 +60,8 @@ const Column = styled.div`
     @media (max-width: 768px) {
       top: 100%;
       margin-top: 16px;
-     }
+      margin-right: 16px;
+    }
   }
 `
 
@@ -195,7 +196,7 @@ const StyledProject = styled.div`
     display: flex;
     a {
       ${({ theme }) => theme.mixins.flexCenter};
-      padding: 4px 6px;
+      padding: 4px 8px;
 
       &.external {
         svg {
@@ -235,8 +236,9 @@ const StyledProject = styled.div`
     list-style: none;
 
     li {
-      font-size: var(--fz-xxs);
+      font-size: 10px;
       line-height: 1.75;
+      opacity: 0.75;
 
       &:not(:last-of-type) {
         margin-right: 15px;
@@ -389,9 +391,15 @@ const Projects = () => {
                 )
               })}
             </div>
-            <div className="view" hidden={showing <= 4}>
+            <a
+              className="view"
+              hidden={showing <= 4}
+              href="https://github.com/eluo28?tab=repositories"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               View More &gt;&gt;
-            </div>
+            </a>
           </div>
         </Column>
       </div>
