@@ -10,9 +10,8 @@ const StyledAboutSection = styled.section`
 
   // background-color: red;
 
-  h2 {
-    font-family: var(--font-playfair);
-    font-size: 32px;
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 `
 
@@ -24,15 +23,53 @@ const LeftCol = styled.div`
   text-align: right;
   // background-color: red;
   margin-right: 64px;
-
+  font-size: 16px;
+  max-width: 380px;
+  h2 {
+    font-family: var(--font-playfair);
+    font-size: 32px;
+  }
   @media (max-width: 1080px) {
     margin-left: 64px;
     margin-right: 32px;
   }
 
-  font-size: 16px;
-  max-width: 380px;
-  // background-color: blue;
+  @media (max-width: 768px) {
+    color: white;
+    margin: 0 0 200px 0;
+    max-width: 100vw;
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      width: 100vw;
+      text-align: left;
+      position: relative;
+      padding-left: 64px;
+      font-size: 24px;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 100%;
+        margin-top: 16px;
+        opacity: 0.75;
+        height: 1px;
+
+        width: 240px;
+
+        background-color: white;
+      }
+    }
+
+    .desc {
+      width: 60vw;
+      margin-top: 32px;
+      font-size: 14px;
+    }
+  }
 `
 
 const RightCol = styled.div`
@@ -52,6 +89,7 @@ const RightCol = styled.div`
     margin-left: 100px;
   }
 
+
   .white_rec {
     position: absolute;
     left: 64px;
@@ -65,6 +103,17 @@ const RightCol = styled.div`
     position: absolute;
     left: 0;
     top: -32px;
+  }
+
+  @media (max-width: 768px) {
+    .white_outline {
+      margin-left: 40px;
+    }
+
+    .white_rec {
+      top: -64px;
+      left: 24px;
+    }
   }
 `
 
@@ -116,7 +165,7 @@ const About = () => {
           <LeftCol>
             <h2>About Me</h2>
 
-            <div>
+            <div className="desc">
               <p>
                 Hello! I'm Edwin, a computer science student at the Rutgers
                 Honors College in New Brunswick, NJ.

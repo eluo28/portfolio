@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.3;
 
     @media (max-width: 768px) {
-      background: black;
+      background: #121212;
     }
 
 

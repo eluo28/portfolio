@@ -9,8 +9,9 @@ const StyledProjectsSection = styled.section`
   .inner {
     display: flex;
 
-    @media (max-width: 600px) {
-      display: block;
+    @media (max-width: 768px) {
+      color: white;
+      flex-direction: column;
     }
   }
 `
@@ -37,6 +38,10 @@ const Column = styled.div`
     @media (max-width: 1080px) {
       margin-left: 32px;
     }
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
   }
 
   .view {
@@ -51,6 +56,11 @@ const Column = styled.div`
     &:hover {
       opacity: 1;
     }
+
+    @media (max-width: 768px) {
+      top: 100%;
+      margin-top: 16px;
+     }
   }
 `
 
@@ -102,6 +112,25 @@ const LeftCol = styled.div`
       background-color: black;
     }
   }
+
+  @media (max-width: 768px) {
+    color: white;
+    text-align: left;
+    // background-color: red;
+    align-items: flex-start;
+    margin-left: 32px;
+
+    h1 {
+      font-size: 20px;
+    }
+
+    h4 {
+      font-size: 10px;
+      &:before {
+        display: none;
+      }
+    }
+  }
 `
 
 const StyledTabList = styled.ul`
@@ -114,6 +143,15 @@ const StyledTabList = styled.ul`
   font-family: var(--font-roboto);
   font-size: 16px;
   font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    // background-color: red;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+  }
 `
 
 const StyledTabButton = styled.div`
@@ -125,6 +163,10 @@ const StyledTabButton = styled.div`
   &:hover,
   &:focus {
     opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 16px;
   }
 `
 
@@ -177,7 +219,7 @@ const StyledProject = styled.div`
 
   .description {
     opacity: 0.9;
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .tech {

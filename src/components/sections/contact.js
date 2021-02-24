@@ -3,8 +3,11 @@ import styled from "styled-components"
 import { email } from "../../config"
 
 const StyledContactSection = styled.section`
-  max-width: 1000px;
   display: flex;
+
+  @media (max-width: 768px) {
+    color: white;
+  }
 `
 
 const Column = styled.div`
@@ -15,27 +18,31 @@ const Column = styled.div`
     margin-left: 64px;
     font-size: 32px;
     font-family: var(--font-playfair);
-    display: flex;
-    flex-direction: column;
+
+    width: 100% - 64px;
+
+    padding-bottom: 32px;
+    border-bottom: 1px solid white;
 
     @media (max-width: 1080px) {
       margin-left: 32px;
+      width: 100% - 32px;
     }
 
-    &:after {
-      position: absolute;
-      // top: 32px;
-      content: "";
-      width: 100%;
-      height: 1px;
-      opacity: 0.75;
-      margin-top: 64px;
-      background-color: white;
+    @media (max-width: 768px) {
+      margin-left: 16px;
+      font-size: 24px;
+
+      width: 100% - 16px;
     }
   }
 
   .left {
+    text-align: right;
+    max-width: 400px;
+
     margin-right: 64px;
+    margin-left: auto;
 
     @media (max-width: 1080px) {
       margin-right: 32px;
@@ -61,6 +68,20 @@ const Column = styled.div`
       align-items: center;
       background-color: rgb(18, 18, 18);
       box-shadow: 0px 7px 6.58px 0.42px rgba(18, 18, 18, 0.35);
+    }
+    @media (max-width: 768px) {
+      margin: 0 0 0 32px;
+      p {
+        display: none;
+      }
+
+      a {
+        box-shadow: 0px 7px 6.58px 0.42px rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+        height: 40px;
+        margin: 64px 0 0 0;
+        font-size: 10px;
+      }
     }
   }
 `

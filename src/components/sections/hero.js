@@ -57,7 +57,43 @@ const StyledHeroSection = styled.div`
     opacity: 0.4;
   }
 
-  
+  @media (max-width: 768px) {
+    color: white;
+
+    h1 {
+      font-size: 12px;
+      margin-right: 200px;
+    }
+
+    h2 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .special {
+      margin: 0 0 0 16px;
+    }
+
+    h3 {
+      margin: 24px 200px 0 0;
+      font-size: 16px;
+    }
+
+    h4 {
+      margin: 24px 0 0 200px;
+      font-size: 14px;
+    }
+
+    h5 {
+      margin: 16px 100px 0 0;
+      font-size: 12px;
+    }
+
+    h6 {
+      margin: 24px 0 0 100px;
+      font-size: 12px;
+    }
+  }
 `
 
 const animate = (direction, children) => {

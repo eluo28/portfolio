@@ -4,14 +4,14 @@ import { CSSTransition } from "react-transition-group"
 import styled from "styled-components"
 
 const StyledJobsSection = styled.section`
-  max-width: 1000px;
   // background-color: white;
 
   .inner {
     display: flex;
 
-    @media (max-width: 600px) {
-      display: block;
+    @media (max-width: 768px) {
+      color: white;
+      flex-direction: column;
     }
   }
 `
@@ -24,8 +24,13 @@ const Column = styled.div`
     font-size: 32px;
     float: right;
     margin-right: 64px;
+
     @media (max-width: 1080px) {
       margin-right: 32px;
+    }
+    @media (max-width: 768px) {
+      margin-right: 64px;
+      font-size: 24px;
     }
   }
 
@@ -36,8 +41,6 @@ const Column = styled.div`
     margin-top: 64px;
     align-items: flex-end;
     width: 100%;
-    // background-color: red;
-    // justify-content: center;
   }
 `
 
@@ -47,10 +50,15 @@ const StyledTabList = styled.ul`
   padding: 0 40px 0 0;
   width: max-content;
   float: right;
+  // background-color: blue;
   z-index: 3;
   @media (max-width: 1080px) {
     margin: 0 32px 0 0;
   }
+  @media (max-width: 768px) {
+    margin-right: 64px;
+  }
+
   list-style: none;
 `
 
@@ -62,6 +70,10 @@ const StyledTabButton = styled.div`
   width: 100%;
   height: var(--tab-height);
   border-right: 2px solid rgba(0, 0, 0, 0.05);
+
+  @media (max-width: 768px) {
+    border-right: 2px solid rgba(255, 255, 255, 0.3);
+  }
 
   justify-content: flex-end;
   font-size: var(--fz-xs);
@@ -93,6 +105,15 @@ const StyledTabButton = styled.div`
     opacity: ${({ isActive }) => (isActive ? ".9" : ".75")};
     font-size: 13px;
   }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 12px;
+    }
+    h5 {
+      font-size: 10px;
+    }
+  }
 `
 const StyledHighlight = styled.div`
   position: absolute;
@@ -105,6 +126,10 @@ const StyledHighlight = styled.div`
   height: var(--tab-height);
   border-radius: 4px;
   background: black;
+  @media (max-width: 768px) {
+    background: white;
+    opacity: 0.8;
+  }
 
   transform: translateY(
     calc(${({ activeTabId }) => activeTabId} * var(--tab-height))
@@ -119,13 +144,8 @@ const StyledTabContent = styled.div`
   margin-left: 64px;
   color: white;
 
-  @media (max-width: 1200px) {
-    width: 400px;
-  }
-
   @media (max-width: 1080px) {
     margin-left: 32px;
-    width: 300px;
   }
 
   h1 {
@@ -147,19 +167,13 @@ const StyledTabContent = styled.div`
     display: flex;
     align-items: center;
     white-space: nowrap;
-    position: relative;
+  }
 
-    &:after {
-      content: "";
-      position: absolute;
-      opacity: 0.75;
-      height: 1px;
-      left: 100%;
-      margin-left: 32px;
-      width: 100vw;
-
-      background-color: white;
-    }
+  h5 {
+    border-bottom: 1px solid white;
+    width: 100%;
+    content: " ";
+    margin-left: 32px;
   }
 
   a {
@@ -170,14 +184,25 @@ const StyledTabContent = styled.div`
 
   .container {
     // background-color: red;
+    width: 100%;
     display: flex;
   }
 
   ul {
+    width: 500px;
     list-style: none;
     font-size: 14px;
     margin-top: 14px;
     padding: 0 0 0 24px;
+
+    @media (max-width: 1300px) {
+      width: 400px;
+    }
+
+    @media (max-width: 1080px) {
+      margin-left: 32px;
+      width: 300px;
+    }
     li {
       position: relative;
       line-height: 160%;
@@ -188,6 +213,34 @@ const StyledTabContent = styled.div`
         position: absolute;
         left: 0;
         color: white;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 32px;
+
+    h1 {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h4 {
+      font-size: 10px;
+    }
+
+    h5 {
+      margin-left: 12px;
+    }
+
+    ul {
+      padding: 0;
+      li {
+        font-size: 12px;
+        margin-bottom: 16px;
       }
     }
   }
@@ -252,12 +305,7 @@ const Jobs = () => {
             const { title, url, company, range } = frontmatter
 
             return (
-              <CSSTransition
-                key={i}
-                in={activeTabId === i}
-                timeout={250}
-                classNames="fade"
-              >
+              <CSSTransition key={i} in={activeTabId === i} classNames="fade">
                 <StyledTabContent id={`panel-${i}`} hidden={activeTabId !== i}>
                   <h1>
                     <h2> {title}</h2>
@@ -268,6 +316,7 @@ const Jobs = () => {
 
                   <div className="container">
                     <h4>{range}</h4>
+                    <h5></h5>
                   </div>
 
                   <div dangerouslySetInnerHTML={{ __html: html }} />
