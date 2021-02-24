@@ -169,10 +169,11 @@ const StyledTabContent = styled.div`
     white-space: nowrap;
   }
 
-  h5 {
+  .line {
     border-bottom: 1px solid white;
     width: 100%;
     content: " ";
+
     margin-left: 32px;
   }
 
@@ -186,6 +187,7 @@ const StyledTabContent = styled.div`
     // background-color: red;
     width: 100%;
     display: flex;
+    align-items: center;
   }
 
   ul {
@@ -202,6 +204,7 @@ const StyledTabContent = styled.div`
     @media (max-width: 1080px) {
       margin-left: 32px;
       width: 300px;
+      padding: 0;
     }
     li {
       position: relative;
@@ -316,7 +319,7 @@ const Jobs = () => {
 
                   <div className="container">
                     <h4>{range}</h4>
-                    <h5></h5>
+                    <div className="line"></div>
                   </div>
 
                   <div dangerouslySetInnerHTML={{ __html: html }} />

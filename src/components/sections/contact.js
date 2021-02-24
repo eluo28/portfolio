@@ -53,7 +53,7 @@ const Column = styled.div`
       font-size: 22px;
       line-height: 1.2;
       letter-spacing: 0.04em;
-      text-align: right;
+      text-align: center;
     }
 
     a {
@@ -92,9 +92,10 @@ const Contact = () => {
       <Column>
         <div className="left">
           <p>
-            Although I'm not currently looking for any new opportunities, my
-            inbox is always open. Whether you have a question or just want to
-            say hi, I'll try my best to get back to you!
+            My inbox is always open for new opportunities.
+            <br />
+            <br />
+            Feel free to reach out!
           </p>
           <a href={`mailto:${email}`}>Come say hi!</a>
         </div>
