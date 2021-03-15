@@ -89,7 +89,6 @@ const RightCol = styled.div`
     margin-left: 100px;
   }
 
-
   .white_rec {
     position: absolute;
     left: 64px;
@@ -150,7 +149,7 @@ const About = () => {
         relativePath: { eq: "me.jpg" }
       ) {
         childImageSharp {
-          fixed(width: 200, height: 320) {
+          fixed(width: 200, height: 320, quality: 90) {
             ...GatsbyImageSharpFixed
           }
         }

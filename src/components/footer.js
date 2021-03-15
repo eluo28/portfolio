@@ -7,11 +7,12 @@ import { email } from "../config.js"
 const StyledFooter = styled.footer`
   height: 80px;
   margin: 0 auto;
+  width: 100%;
   align-items: center;
   padding-top: 100px;
-
   max-width: 1000px;
   display: flex;
+  justify-content: center;
 
   font-size: 13px;
 
@@ -79,18 +80,6 @@ const StyledSocialLinks = styled.ul`
 const Footer = () => {
   return (
     <StyledFooter>
-      {/* <StyledSocialLinks>
-        <ul>
-          {socialMedia &&
-            socialMedia.map(({ name, url }, i) => (
-              <li key={i}>
-                <a href={url} aria-label={name}>
-                  <Icon name={name} />
-                </a>
-              </li>
-            ))}
-        </ul>
-      </StyledSocialLinks> */}
       <Column>
         <div className="left">
           <span>Created by Edwin Luo</span>

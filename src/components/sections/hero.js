@@ -10,7 +10,7 @@ const StyledHeroSection = styled.div`
 
   h1 {
     font-size: 22px;
-    margin-right: 600px;
+    margin: 0 550px 0 32px;
     font-weight: 300;
     letter-spacing: 0.05em;
     opacity: 0.8;
@@ -30,7 +30,7 @@ const StyledHeroSection = styled.div`
   }
 
   h3 {
-    margin: 32px 500px 0 0;
+    margin: 32px 600px 0 32px;
     font-size: 26px;
     opacity: 0.5;
     letter-spacing: 0.05em;
@@ -51,7 +51,7 @@ const StyledHeroSection = styled.div`
   }
 
   h6 {
-    margin: 34px 0 0 400px;
+    margin: 34px 0 0 200px;
     font-size: 20px;
     color: white;
     opacity: 0.4;
@@ -134,10 +134,10 @@ const Hero = () => {
           {animate("right", <span className="special">Luo.</span>)}
         </h2>
 
-        {animate("left", <h3>I am a software engineer.</h3>)}
-        {animate("right", <h4>Future Hedgewin CTO.</h4>)}
-        {animate("left", <h5>I'll quadruple your money!</h5>)}
-        {animate("right", <h6>Feel free to invest.</h6>)}
+        {animate("left", <h3>Software engineer.</h3>)}
+        {animate("right", <h4>Future Hedgwin CTO.</h4>)}
+        {animate("left", <h5>Current food fanatic.</h5>)}
+        {animate("right", <h6>Previous addict.</h6>)}
       </div>
     </StyledHeroSection>
   )
