@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { Icon } from "../../components/icons"
-import {window} from 'browser-monads'
 
 const StyledProjectsSection = styled.section`
   // background-color: white;
@@ -288,7 +287,7 @@ const Projects = () => {
     return () => {
       window.removeEventListener("resize", handleResize)
     }
-  }, [])
+  })
 
   let maxShow = width >= 1300 ? 4 : 2
 
