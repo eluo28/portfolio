@@ -275,9 +275,13 @@ const Projects = () => {
   const [activeTabCat, setActiveTabCat] = useState("All")
 
   let showing = 0
+  let innerWidth = 0
 
-  const [width, setWidth] = React.useState(window.innerWidth)
+  if (typeof window !== `undefined`) {
+    innerWidth = window.innerWidth
+  }
 
+  const [width, setWidth] = React.useState(innerWidth)
   useEffect(() => {
     function handleResize() {
       setWidth(window.innerWidth)
@@ -288,7 +292,13 @@ const Projects = () => {
 
   let maxShow = width >= 1300 ? 4 : 2
 
-  const categories = ["All", "Web Development", "Machine Learning", "Scripts", "Blockchain"]
+  const categories = [
+    "All",
+    "Web Development",
+    "Machine Learning",
+    "Scripts",
+    "Blockchain",
+  ]
 
   const isHidden = (category, activeCat) => {
     if (category === activeCat || activeCat === "All") {

@@ -48,7 +48,7 @@ const Column = styled.div`
 
     p {
       font-size: 22px;
-      line-height: 1.2;
+     
       letter-spacing: 0.01em;
       text-align: center;
     }
