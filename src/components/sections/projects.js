@@ -289,7 +289,7 @@ const Projects = () => {
   //   }
   // })
 
-  let maxShow = 4;
+  let maxShow = 4
 
   const categories = [
     "All",
@@ -313,10 +313,6 @@ const Projects = () => {
     } else {
       return false
     }
-  }
-
-  if (typeof window === `undefined`) {
-    return <></>
   }
 
   return (
