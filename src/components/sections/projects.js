@@ -277,7 +277,7 @@ const Projects = () => {
   let showing = 0
 
   const [width, setWidth] = React.useState(
-    typeof window !== "undefined" ? window.innerWidth : 1300
+    typeof window !== "undefined" ? window.innerWidth : 0
   )
 
   useEffect(() => {
@@ -313,6 +313,10 @@ const Projects = () => {
     } else {
       return false
     }
+  }
+
+  if (typeof window === `undefined`) {
+    return <></>
   }
 
   return (
