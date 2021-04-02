@@ -276,6 +276,10 @@ const Projects = () => {
 
   let showing = 0
 
+  if (typeof window === `undefined`) {
+    return <></>
+  }
+
   const [width, setWidth] = React.useState(
     typeof window !== `undefined` ? window.innerWidth : 1300
   )
