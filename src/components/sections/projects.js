@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { Icon } from "../../components/icons"
+import {window} from 'browser-monads'
 
 const StyledProjectsSection = styled.section`
   // background-color: white;
@@ -402,7 +403,7 @@ const Projects = () => {
             </div>
             <a
               className="view"
-              hidden={showing <= 4}
+              hidden={showing <= maxShow}
               href="https://github.com/eluo28?tab=repositories"
               rel="noopener noreferrer"
               target="_blank"
