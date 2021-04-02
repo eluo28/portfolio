@@ -8,7 +8,7 @@ url: "https://www.minoslabs.com/"
 season: "Spring 2021"
 ---
 
-- Developed and shipped highly interactive web applications for Apple Music using Ember.js
-- Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs
-- Architected and implemented the front-end of Apple Music's embeddable web player widget, which lets users log in and listen to full songs in the browser
-- Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps
+- Coordinated review of legacy code to modularize components and styling, reducing codebase by 18%
+- Implemented SignEasy API using React and Firebase to establish hiring document pipeline for 100% of clients
+- Engaged in Scrum sprints with daily standups for feedback on product features to ensure deliverables
+

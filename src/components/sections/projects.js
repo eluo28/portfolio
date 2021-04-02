@@ -288,7 +288,7 @@ const Projects = () => {
 
   let maxShow = width >= 1300 ? 4 : 2
 
-  const categories = ["All", "Web Development", "Machine Learning", "Scripts"]
+  const categories = ["All", "Web Development", "Machine Learning", "Scripts", "Blockchain"]
 
   const isHidden = (category, activeCat) => {
     if (category === activeCat || activeCat === "All") {

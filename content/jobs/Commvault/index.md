@@ -8,7 +8,7 @@ url: "https://www.commvault.com/"
 season: "Fall 2019"
 ---
 
-- Developed and shipped highly interactive web applications for Apple Music using Ember.js
-- Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs
-- Architected and implemented the front-end of Apple Music's embeddable web player widget, which lets users log in and listen to full songs in the browser
-- Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps
+- Created a Go shell script using kubectl to automate the creation and deletion of Kubernetes clusters
+- Enabled script compatibility with AWS EKS and local providers on Windows and Linux systems
+- Provided a basis for the Commvault Kubernetes team to test and create Kubernetes products
+
