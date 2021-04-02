@@ -174,6 +174,10 @@ const About = () => {
                 new technologies and applying them to achieve this goal is
                 something I love to do.
               </p>
+              <p>
+                Outside of software engineering I have a variety of interests
+                including stocks, music, gaming, the gym, anime, and soccer. :)
+              </p>
               I'm always looking for opportunities to grow as a software
               engineer and hope to one day affect billions of lives around the
               world with my work.
