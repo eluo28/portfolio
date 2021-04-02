@@ -1,5 +1,21 @@
 import React from "react"
+import { Layout, Hero, About, Jobs, Projects, Contact } from "../components"
+import styled from "styled-components"
 
-export default function Home() {
-  return <div>Hello world!</div>
+const StyledMainContainer = styled.main``
+
+const IndexPage = () => {
+  return (
+    <Layout>
+      <StyledMainContainer>
+        <Hero />
+        <About />
+        <Jobs />
+        <Projects />
+        <Contact />
+      </StyledMainContainer>
+    </Layout>
+  )
 }
+
+export default IndexPage
