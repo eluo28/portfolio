@@ -37,17 +37,17 @@ const LeftCol = styled.div`
   @media (max-width: 768px) {
     color: white;
     margin: 0 0 200px 0;
-    max-width: 100vw;
+
     // background-color: red;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     h2 {
-      width: 100vw;
       text-align: left;
       position: relative;
       padding-left: 64px;
+      width: 100%;
       font-size: 24px;
       &:after {
         content: "";
@@ -64,8 +64,10 @@ const LeftCol = styled.div`
       }
     }
 
+   
+
     .desc {
-      width: 60vw;
+      width: 70vw;
       margin-top: 32px;
       font-size: 14px;
     }
@@ -163,6 +165,7 @@ const About = () => {
         <Column>
           <LeftCol>
             <h2>About Me</h2>
+           
 
             <div className="desc">
               <p>

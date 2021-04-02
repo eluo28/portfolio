@@ -277,7 +277,7 @@ const Projects = () => {
   let showing = 0
 
   const [width, setWidth] = React.useState(
-    typeof window !== `undefined` ? window.innerWidth : null
+    typeof window !== `undefined` ? window.innerWidth : 1300
   )
   useEffect(() => {
     function handleResize() {

@@ -19,7 +19,7 @@ const Column = styled.div`
     font-size: 32px;
     font-family: var(--font-playfair);
 
-    width: 100%;
+    width: calc(100%-64px);
 
     padding-bottom: 32px;
     border-bottom: 1px solid white;
