@@ -275,13 +275,10 @@ const Projects = () => {
   const [activeTabCat, setActiveTabCat] = useState("All")
 
   let showing = 0
-  let innerWidth = 0
 
-  if (typeof window !== `undefined`) {
-    innerWidth = window.innerWidth
-  }
-
-  const [width, setWidth] = React.useState(innerWidth)
+  const [width, setWidth] = React.useState(
+    typeof window !== `undefined` ? window.innerWidth : null
+  )
   useEffect(() => {
     function handleResize() {
       setWidth(window.innerWidth)
