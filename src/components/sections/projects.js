@@ -290,10 +290,6 @@ const Projects = () => {
     }
   })
 
-  if (typeof window === `undefined`) {
-    return <></>
-  }
-
   let maxShow = width >= 1300 ? 4 : 2
 
   const categories = [
