@@ -277,18 +277,17 @@ const Projects = () => {
   let showing = 0
 
   const [width, setWidth] = React.useState(
-    typeof window !== `undefined` ? window.innerWidth : 1300
+    typeof window !== "undefined" ? window.innerWidth : 1300
   )
-  useEffect(() => {
-    if (typeof window === "undefined") return
 
+  useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth)
 
     window.addEventListener("resize", handleResize)
     return () => {
       window.removeEventListener("resize", handleResize)
     }
-  })
+  }, [])
 
   let maxShow = width >= 1300 ? 4 : 2
 
