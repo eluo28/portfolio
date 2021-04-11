@@ -48,8 +48,7 @@ const Column = styled.div`
 
     p {
       font-size: 22px;
-     
-      letter-spacing: 0.01em;
+
       text-align: center;
     }
 
@@ -88,12 +87,7 @@ const Contact = () => {
     <StyledContactSection id="contact">
       <Column>
         <div className="left">
-          <p>
-            My inbox is always open for new opportunities.
-            <br />
-            <br />
-            Feel free to reach out!
-          </p>
+          <p>My inbox is always open for new opportunities.</p>
           <a href={`mailto:${email}`}>Come say hi!</a>
         </div>
       </Column>

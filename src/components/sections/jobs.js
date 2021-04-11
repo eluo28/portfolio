@@ -152,6 +152,7 @@ const StyledTabContent = styled.div`
     font-weight: 300;
     font-size: 24px;
     margin-bottom: 8px;
+    margin-right: 20px;
   }
 
   h2 {
@@ -331,6 +332,7 @@ const Jobs = () => {
                     <div>
                       <h2> {title}</h2>
                     </div>
+
                     <a href={url} rel="noopener noreferrer" target="_blank">
                       &#64; {company}
                     </a>
