@@ -280,20 +280,6 @@ const Projects = () => {
   const { width, ref } = useResizeDetector()
 
   let maxShow = width > 1300 ? 4 : 2
-  console.log(width)
-
-  // const [width, setWidth] = React.useState(0)
-
-  // useEffect(() => {
-  //   const handleResize = () => setWidth(window.innerWidth)
-  //   window.addEventListener("resize", handleResize)
-  //   return () => {
-  //     window.removeEventListener("resize", handleResize)
-  //   }
-  // })
-
-  // let maxShow = width > 1300 ? 4 : 2
-  // let maxShow = 4
 
   const categories = [
     "All",
