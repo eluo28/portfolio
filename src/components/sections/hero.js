@@ -104,7 +104,7 @@ const animate = (direction, children) => {
       <ScrollAnimation
         animateIn="animate__fadeInLeft"
         animateOut="animate__fadeOutLeft"
-        offset={150}
+        offset={200}
       >
         {children}
       </ScrollAnimation>
@@ -114,7 +114,7 @@ const animate = (direction, children) => {
       <ScrollAnimation
         animateIn="animate__fadeInRight"
         animateOut="animate__fadeOutRight"
-        offset={150}
+        offset={200}
       >
         {children}
       </ScrollAnimation>
@@ -135,7 +135,7 @@ const Hero = () => {
         </h2>
 
         {animate("left", <h3>Software engineer.</h3>)}
-        {animate("right", <h4>Future Hedgwin CTO.</h4>)}
+        {animate("right", <h4>Stack overflow scholar.</h4>)}
         {animate("left", <h5>＜（＾－＾）＞</h5>)}
         {animate("right", <h6>To the moon!</h6>)}
       </div>

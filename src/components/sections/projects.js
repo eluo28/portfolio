@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { Icon } from "../../components/icons"
@@ -236,9 +236,9 @@ const StyledProject = styled.div`
     list-style: none;
 
     li {
-      font-size: 10px;
+      font-size: 12px;
       line-height: 1.75;
-      opacity: 0.75;
+      opacity: 0.8;
 
       &:not(:last-of-type) {
         margin-right: 15px;
