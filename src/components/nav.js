@@ -100,9 +100,6 @@ const Nav = () => {
           currentClassName="nav__item--active"
           className="inner"
           offset={-200}
-          onUpdate={el => {
-            console.log(el)
-          }}
         >
           {navLinks.map(({ url, name }, i) => (
             <li key={i} className="item">
