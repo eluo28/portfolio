@@ -45,6 +45,14 @@ const GlobalStyle = createGlobalStyle`
 
   }
 
+  .cls-1,.cls-2{
+    fill:none;
+  }.cls-2{
+    stroke:#fff;
+    stroke-miterlimit:10;
+    stroke-width:120px;
+  }
+
  
   main {
     margin: 0 auto;

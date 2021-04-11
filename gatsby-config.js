@@ -5,6 +5,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
+
     `gatsby-plugin-sharp`,
     {
       resolve: "gatsby-source-filesystem",
@@ -25,6 +26,16 @@ module.exports = {
       options: {
         name: `projects`,
         path: `${__dirname}/content/projects`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Edwin Luo Portfolio`,
+        short_name: `Edwin Luo`,
+        start_url: `/`,
+
+        icon: `src/images/logo.svg`,
       },
     },
   ],

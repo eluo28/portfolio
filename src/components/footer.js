@@ -16,6 +16,11 @@ const StyledFooter = styled.footer`
 
   font-size: 13px;
 
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+
   @media (max-width: 768px) {
     color: white;
     font-size: 10px;
@@ -64,11 +69,6 @@ const StyledSocialLinks = styled.ul`
   li {
     a {
       padding: 10px;
-
-      svg {
-        width: 16px;
-        height: 16px;
-      }
     }
   }
 
@@ -87,7 +87,9 @@ const Footer = () => {
         </div>
       </Column>
       <Column>
-        <div className="right">logo</div>
+        <div className="right">
+          <Icon name="Logo" />
+        </div>
         <StyledSocialLinks>
           {socialMedia &&
             socialMedia.map(({ name, url }, i) => (

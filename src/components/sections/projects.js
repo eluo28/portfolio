@@ -175,6 +175,11 @@ const StyledTabButton = styled.div`
 const StyledProject = styled.div`
   color: white;
 
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
   .project-inner {
     // background-color: red;
     box-shadow: 0px 7px 6.58px 0.42px rgba(0, 0, 0, 0.6);
@@ -344,7 +349,9 @@ const Projects = () => {
                   >
                     <div className="project-inner">
                       <div className="top">
-                        <div>logo</div>
+                        <div>
+                          <Icon name="Logo" />
+                        </div>
                         <div className="links">
                           {github && (
                             <a
