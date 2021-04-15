@@ -292,6 +292,7 @@ const Projects = () => {
     "Machine Learning",
     "Scripts",
     "Blockchain",
+    "OOP"
   ]
 
   const isHidden = (category, activeCat) => {
