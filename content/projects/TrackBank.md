@@ -2,7 +2,7 @@
 date: '2020-05-01'
 title: 'Track Bank'
 github: 'https://github.com/eluo28/Track-Bank'
-external: 'https://track-bank.herokuapp.com/'
+external: ''
 tech:
   - React
   - MongoDB
