@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Side from "./side.js"
-import { Link } from "gatsby"
+import resume from "../images/Edwin Luo Resume.pdf"
 
 const StyledResume = styled.div`
   display: flex;
@@ -41,7 +41,9 @@ const StyledResume = styled.div`
 const Resume = () => (
   <Side orientation="right" top="top">
     <StyledResume>
-      <Link to="#">Resume</Link>
+      <a href={resume} target="blank">
+        Resume
+      </a>
     </StyledResume>
   </Side>
 )
