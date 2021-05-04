@@ -1,14 +1,14 @@
 ---
-date: "2021-04-02"
-title: "DeBank"
-github: "https://github.com/eluo28/DeBank"
-external: "https://eluo28.github.io/DeBank/"
+date: "2021-05-04"
+title: "DockerOps"
+github: "https://github.com/eluo28/DockerOps"
+external: ""
 tech:
-  - Solidity
-  - Truffle
-  - Ganache
+  - Docker
+  - Express
+  - Mongo
 
-category: "Blockchain"
+category: "DevOps"
 ---
 
-A DApp that simulates bank functions built using ethereum blockchain technologies and deployed on the ropsten testnet.
+Applied Docker workflow to build an Express application using Mongo, Redis, and Nginx services.
