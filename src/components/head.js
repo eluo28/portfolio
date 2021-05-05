@@ -1,10 +1,27 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { logo } from "../images/logo.svg"
+import ogImage from "../images/ogimg.jpg"
 
 const Head = () => {
   return (
-    <Helmet>
+    <Helmet
+      title="Edwin Luo"
+      meta={[
+        {
+          property: `og:title`,
+          content: "Edwin Luo",
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: `https://www.edwinluo.com/${ogImage}`,
+        },
+      ]}
+    >
       <meta charSet="utf-8" />
       <title>Edwin Luo</title>
       <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -15,7 +32,6 @@ const Head = () => {
         rel="stylesheet"
       />
 
-      {/* <link rel="canonical" href="http://mysite.com/example" /> */}
     </Helmet>
   )
 }
