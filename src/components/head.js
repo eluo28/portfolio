@@ -16,10 +16,8 @@ const Head = () => {
         rel="stylesheet"
       />
 
-      <meta property="og:image" content={`edwinluo.com/${ogImage}`} />
+      <meta property="og:image" content={`${domain} + ${ogImage}`} />
       <meta property="og:title" content="Edwin Luo" />
-      <meta property="og:image:width" content="400" />
-      <meta property="og:image:width" content="50" />
     </Helmet>
   )
 }
