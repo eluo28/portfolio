@@ -5,23 +5,7 @@ import ogImage from "../images/ogimg.jpg"
 
 const Head = () => {
   return (
-    <Helmet
-      title="Edwin Luo"
-      meta={[
-        {
-          property: `og:title`,
-          content: "Edwin Luo",
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          property: `og:image`,
-          content: `https://www.edwinluo.com/${ogImage}`,
-        },
-      ]}
-    >
+    <Helmet>
       <meta charSet="utf-8" />
       <title>Edwin Luo</title>
       <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -32,6 +16,8 @@ const Head = () => {
         rel="stylesheet"
       />
 
+      <meta property="og:image" content={`edwinluo.com/${ogImage}`} />
+      <meta property="og:title" content="Edwin Luo" />
     </Helmet>
   )
 }
