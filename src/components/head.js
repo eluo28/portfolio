@@ -1,7 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { logo } from "../images/logo.svg"
-import ogImage from "../images/ogimg.jpg"
 
 const Head = () => {
   return (
@@ -16,8 +15,6 @@ const Head = () => {
         rel="stylesheet"
       />
 
-      <meta property="og:image" content={`https://edwinluo.com/${ogImage}`} />
-      <meta property="og:title" content="Edwin Luo" />
     </Helmet>
   )
 }
