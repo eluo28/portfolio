@@ -16,7 +16,7 @@ const Head = () => {
         rel="stylesheet"
       />
 
-      <meta property="og:image" content={`${domain} + ${ogImage}`} />
+      <meta property="og:image" content={`https://edwinluo.com/${ogImage}`} />
       <meta property="og:title" content="Edwin Luo" />
     </Helmet>
   )
