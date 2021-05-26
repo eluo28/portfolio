@@ -36,5 +36,13 @@ module.exports = {
         icon: `src/images/logo.svg`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "273679873", // Google Analytics / GA
+        ],
+      },
+    },
   ],
 }
