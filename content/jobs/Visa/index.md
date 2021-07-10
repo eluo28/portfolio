@@ -8,6 +8,9 @@ url: "https://usa.visa.com/"
 season: "Summer 2021"
 ---
 
-- Developing Java APIs on the Debit Processing Services Team for third-party companies
-- Filling product backlog and delivering production-ready code in 2 week Scrum sprints 
+- Developing REST APIs to provide a new Visa Transaction Controls feature to over 60 million users
+- Creating a minimum viable product using Spring and MongoDB to satisfy client requirements
+- Enforcing proper development workflow by using JUnit testing and Git to ensure production ready code
+- Engaging in Scrum sprints following Agile methodology to ensure timely delivery of development goals
+
 
