@@ -48,6 +48,7 @@ const StyledTabList = styled.ul`
   margin: 0 64px 0 0;
   position: relative;
   padding: 0 40px 0 0;
+
   width: max-content;
   float: right;
   // background-color: blue;
@@ -70,12 +71,13 @@ const StyledTabButton = styled.div`
   width: 100%;
   height: var(--tab-height);
   border-right: 2px solid rgba(0, 0, 0, 0.05);
+  // background-color: blue;
 
   @media (max-width: 768px) {
     border-right: 2px solid rgba(255, 255, 255, 0.3);
   }
 
-  justify-content: flex-end;
+  justify-content: space-between;
   font-size: var(--fz-xs);
 
   white-space: nowrap;
@@ -104,6 +106,7 @@ const StyledTabButton = styled.div`
     font-weight: 300;
     opacity: ${({ isActive }) => (isActive ? ".9" : ".75")};
     font-size: 13px;
+    // background: red;
   }
 
   @media (max-width: 768px) {
