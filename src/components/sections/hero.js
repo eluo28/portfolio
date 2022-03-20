@@ -134,8 +134,8 @@ const Hero = () => {
           {animate("right", <span className="special">Luo.</span>)}
         </h2>
 
-        {animate("left", <h3>Software engineer.</h3>)}
-        {animate("right", <h4>Stack overflow scholar.</h4>)}
+        {animate("left", <h3>Software engineer</h3>)}
+        {animate("right", <h4>Stack overflow scholar</h4>)}
         {animate("left", <h5>＜（＾－＾）＞</h5>)}
         {animate("right", <h6>To the moon!</h6>)}
       </div>
