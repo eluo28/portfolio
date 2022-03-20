@@ -177,12 +177,14 @@ const About = () => {
               </p>
               <p>
                 Outside of software engineering I have a variety of interests
-                including stocks, music, gaming, the gym, and soccer. :)
+                including cooking, eating, working out, learning guitar+singing,
+                music, soccer, and volleyball :)
               </p>
-              I'm always looking for opportunities to grow as a software
-              engineer and hope to one day affect billions of lives around the
-              world with my work.
-              <p></p>
+              <p>
+                I'm always looking for opportunities to grow as a software
+                engineer and hope to one day affect billions of lives around the
+                world with my work.
+              </p>
             </div>
           </LeftCol>
         </Column>
