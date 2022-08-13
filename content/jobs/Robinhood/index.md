@@ -8,4 +8,7 @@ url: "https://robinhood.com/"
 season: "Summer 2022"
 ---
 
-- There ain't no hood like Robinhood.
+- Developed feature data pipelines using Python to support anti-fraud machine learning models and heuristic rules
+- Ingested features, trained, and deployed a new debit card anti-fraud model using Presto SQL, Pandas, and XGBoost to improve recent average monthly precision by 42% and recall by 92% relative to the previous model 
+- Conducted offline analysis using Presto SQL to monitor and evaluate performance of models and heuristic rules
+
