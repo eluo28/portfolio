@@ -8,9 +8,8 @@ url: "https://usa.visa.com/"
 season: "Summer 2021"
 ---
 
-- Developed REST APIs to provide a new Visa Transaction Controls feature to over 60 million users
-- Created a minimum viable product using Spring and MongoDB to satisfy client requirements
-- Enforced proper development workflow by using Git, JUnit, and Karate to ensure production-ready code
-- Engaged in Scrum sprints following Agile methodology to ensure timely delivery of development goals
+- Developed Spring Boot REST APIs for a Visa Transaction Controls MVP planned for over 60 million users 
+- Engaged in Agile methodology and proper development workflow using Git, JUnit, and Karate testing
+
 
 
