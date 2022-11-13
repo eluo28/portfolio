@@ -1,8 +1,8 @@
 ---
 date: "2021-10-10"
-title: "Fullstack Software Engineer Intern"
+title: "Software Engineer Intern - Fullstack"
 company: "Certik"
-location: "New York, New York"
+location: "New York City, New York"
 range: "October 2021 - December 2021"
 url: "https://www.certik.com/"
 season: "Fall 2021"

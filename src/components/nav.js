@@ -96,7 +96,7 @@ const Nav = () => {
     <StyledHeader>
       <StyledLinks>
         <Scrollspy
-          items={["about", "jobs", "projects", "contact"]}
+          items={["about", "jobs", "contact"]}
           currentClassName="nav__item--active"
           className="inner"
           offset={-200}

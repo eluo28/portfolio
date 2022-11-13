@@ -1,8 +1,8 @@
 ---
 date: "2022-5-23"
-title: "Backend Software Engineer Intern"
+title: "Software Engineer Intern - Backend"
 company: "Robinhood"
-location: "Menlo , NJ"
+location: "Menlo Park, CA"
 range: "May 2022 - August 2022"
 url: "https://robinhood.com/"
 season: "Summer 2022"

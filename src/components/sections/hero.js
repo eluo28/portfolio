@@ -128,16 +128,16 @@ const Hero = () => {
   return (
     <StyledHeroSection id="hero">
       <div>
-        {animate("left", <h1>Hello, my name is</h1>)}
+        {animate("left", <h1>hi, my name is</h1>)}
         <h2>
           {animate("left", <span>Edwin</span>)}
           {animate("right", <span className="special">Luo.</span>)}
         </h2>
 
-        {animate("left", <h3>Software engineer</h3>)}
-        {animate("right", <h4>Stack overflow scholar</h4>)}
+        {animate("left", <h3>software engineer</h3>)}
+        {animate("right", <h4>stack overflow scholar</h4>)}
         {animate("left", <h5>＜（＾－＾）＞</h5>)}
-        {animate("right", <h6>To the moon!</h6>)}
+        {animate("right", <h6>to the moon!</h6>)}
       </div>
     </StyledHeroSection>
   )

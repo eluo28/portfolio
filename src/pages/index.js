@@ -11,7 +11,7 @@ const IndexPage = () => {
         <Hero />
         <About />
         <Jobs />
-        <Projects />
+        {/* <Projects /> */}
         <Contact />
       </StyledMainContainer>
     </Layout>

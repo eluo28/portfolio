@@ -166,24 +166,19 @@ const About = () => {
             <h2>About Me</h2>
 
             <div className="desc">
+              <p>Hi! I'm Edwin, a CS student @ Rutgers University.</p>
               <p>
-                Hello! I'm Edwin, a computer science student at the Rutgers
-                Honors College in New Brunswick, NJ.
-              </p>
-              <p>
-                I enjoy creating products and experiences that impact. Learning
-                new technologies and applying them to achieve this goal is
-                something I love to do.
+                I enjoy creating products and experiences that impact, using
+                programming as a means to an end.
               </p>
               <p>
                 Outside of software engineering I have a variety of interests
                 including cooking, eating, working out, learning guitar+singing,
-                music, soccer, and volleyball :)
+                music, and soccer. :)
               </p>
               <p>
-                I'm always looking for opportunities to grow as a software
-                engineer and hope to one day affect billions of lives around the
-                world with my work.
+                One day I will become CTO of the Hedgewins - a company with
+                friends that impact others in a positive way.
               </p>
             </div>
           </LeftCol>

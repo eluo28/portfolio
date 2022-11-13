@@ -1,6 +1,6 @@
 ---
 date: "2019-8-01"
-title: "Development Operations Intern"
+title: "Software Engineer Intern - DevOps"
 company: "Commvault"
 location: "Tinton Falls, NJ"
 range: "September 2019 - January 2020"
