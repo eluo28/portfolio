@@ -1,6 +1,6 @@
 ---
 date: "2021-01-01"
-title: "Full Stack Development Intern"
+title: "Software Engineer Intern - Fullstack"
 company: "Minos Labs"
 location: "Jersey City, NJ"
 range: "January 2021 - April 2021"

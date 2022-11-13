@@ -4,6 +4,7 @@ import { email } from "../../config"
 
 const StyledContactSection = styled.section`
   display: flex;
+  align-items: center;
 
   @media (max-width: 768px) {
     color: white;
@@ -87,8 +88,7 @@ const Contact = () => {
     <StyledContactSection id="contact">
       <Column>
         <div className="left">
-          <p>My inbox is always open for new opportunities.</p>
-          <a href={`mailto:${email}`}>Come say hi!</a>
+          <a href={`mailto:${email}`}>email</a>
         </div>
       </Column>
       <Column>

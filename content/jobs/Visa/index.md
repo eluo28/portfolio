@@ -1,6 +1,6 @@
 ---
 date: "2021-05-26"
-title: "Backend Software Engineer Intern"
+title: "Software Engineer Intern - Backend"
 company: "Visa"
 location: "Highlands Ranch, CO"
 range: "May 2021 - August 2021"
