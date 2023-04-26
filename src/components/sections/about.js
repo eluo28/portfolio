@@ -117,31 +117,7 @@ const RightCol = styled.div`
   }
 `
 
-// const Skills = styled.div`
-//   margin-bottom: 100px;
-//   display: flex;
-//   justify-content: center;
-//   span {
-//     display: inline-block;
-//     color: white;
-//     mix-blend-mode: difference;
-//     margin: 0 20px;
-//   }
-// `
-
 const About = () => {
-  // const skills = [
-  //   "Java",
-  //   "Python",
-  //   "React",
-  //   "Javascript",
-  //   "C",
-  //   "C++",
-  //   "Go",
-  //   "HTML",
-  //   "CSS",
-  //   "SQL",
-  // ]
 
   const data = useStaticQuery(graphql`
     query {
@@ -166,7 +142,7 @@ const About = () => {
             <h2>About Me</h2>
 
             <div className="desc">
-              <p>Hi! I'm Edwin, a CS student @ Rutgers University.</p>
+              <p>Hi! I'm Edwin, a CS graduate from Rutgers University.</p>
               <p>
                 I enjoy creating products and experiences that impact, using
                 programming as a means to an end.
@@ -193,14 +169,6 @@ const About = () => {
           </RightCol>
         </Column>
       </StyledAboutSection>
-      {/* <Skills>
-        {skills.map((skill, i) => (
-          <>
-            <span>{skill}</span>
-            {i != skills.length - 1 ? <span>-</span> : null}
-          </>
-        ))}
-      </Skills> */}
     </>
   )
 }
