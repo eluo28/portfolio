@@ -1,5 +1,5 @@
 ---
-date: "2022-5-23"
+date: "2022-05-23"
 title: "Software Engineer Intern - Backend"
 company: "Robinhood"
 location: "Menlo Park, CA"

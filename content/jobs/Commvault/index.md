@@ -1,5 +1,5 @@
 ---
-date: "2019-8-01"
+date: "2019-08-01"
 title: "Software Engineer Intern - DevOps"
 company: "Commvault"
 location: "Tinton Falls, NJ"
