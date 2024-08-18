@@ -135,7 +135,7 @@ const Hero = () => {
         </h2>
 
         {animate("left", <h3>software engineer</h3>)}
-        {animate("right", <h4>stack overflow scholar</h4>)}
+        {animate("right", <h4>GPT abuser</h4>)}
         {animate("left", <h5>＜（＾－＾）＞</h5>)}
         {animate("right", <h6>to the moon!</h6>)}
       </div>
