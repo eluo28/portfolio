@@ -149,12 +149,8 @@ const About = () => {
               </p>
               <p>
                 Outside of software engineering I have a variety of interests
-                including cooking, eating, working out, learning guitar+singing,
-                music, and soccer. :)
-              </p>
-              <p>
-                One day I will become CTO of the Hedgewins - a company with
-                friends that impact others in a positive way.
+                including cooking, eating, working out, guitar,
+                music, skiing, poker, and soccer. :)
               </p>
             </div>
           </LeftCol>
