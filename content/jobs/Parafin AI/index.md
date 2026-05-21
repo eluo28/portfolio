@@ -1,15 +1,16 @@
 ---
-date: "2025-05-01"
-title: "Applied AI Engineer - Backend, Python"
+date: "2026-02-01"
+title: "Staff Engineer, Agentic AI Tech Lead - Backend, Python"
 company: "Parafin"
 location: "San Francisco, CA"
-range: "May 2025 - Present"
+range: "Feb 2026 - Present"
 url: "https://www.parafin.com/"
-season: "Spring 2025"
+season: "Spring 2026"
 ---
 
-- Building and leading execution for Parafin's LLM roadmap, focusing on leveraging agents to improve the efficiency of company systems, products, and processes
-- Built a web-based agentic workflow for adverse media checks, replacing ~100 hr/week of manual effort
-- Architected agentic transaction classification for both realtime and offline underwriting pipelines, unlocking core new product offerings (BNPL, Plaid-boosting) dependent on transaction based underwriting
+- Leading a team to create and execute Parafin's LLM roadmap, focusing on leveraging agents to support new core products, automate operational processes, and developer experience
+- Built an agentic transaction classification service for both realtime and offline underwriting pipelines, unlocking core new product offerings (BNPL, Plaid-boosting) dependent on transaction based underwriting, powering hundreds of millions of dollars in new originations annualized
 - Built an offline agentic classification pipeline for churned businesses operational status to legally and efficiently recollect otherwise lost repayments, recovering over $2,000,000 and counting
-- Implemented tooling & context infra (claude pr reviews, claude skills, migration from GPT enterprise to claude.ai) for both developers and non-technical stakeholders to unlock org-wide productivity gains (e.g. supporting a databricks context layer to enable anyone to self serve data insights)
+- Built a web-based agentic workflow for adverse media checks, replacing ~100 hr/week of manual effort
+- Rehauled company coding interviews to be AI-native in a custom sandbox with AI supported evaluation
+- Developing background agent sandbox infrastructure using Modal, Cloudflare, and Envoy to close the feedback loop across the entire Parafin stack, unlocking a secure and self-validating environment for agentic development

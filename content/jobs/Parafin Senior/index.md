@@ -3,9 +3,9 @@ date: "2024-08-07"
 title: "Senior Software Engineer - Backend, Python"
 company: "Parafin"
 location: "San Francisco, CA"
-range: "Aug 2024 - May 2025"
+range: "Aug 2024 - Feb 2026"
 url: "https://www.parafin.com/"
-season: "Summer 2024 - Spring 2025"
+season: "Summer 2024 - Winter 2026"
 ---
 
 - Led migration of the core decisioning service as the first production use case for the company's new Python monolith—the designated primary backend platform for net new code
